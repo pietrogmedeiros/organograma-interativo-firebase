@@ -90,18 +90,4 @@ A aplicação será aberta em seu navegador, pronta para uso!
 
 ---
 
-### 📜 Regras de Segurança (Firestore)
-
-Para desenvolvimento, você pode usar regras abertas. Na aba "Regras" do seu Firestore, use:
-
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /{document=**} {
-      // ATENÇÃO: Apenas para desenvolvimento.
-      // Em produção, restrinja o acesso.
-      allow read, write: if true;
-    }
-  }
-}
+Feito com ❤️ por Pietro Medeiros
