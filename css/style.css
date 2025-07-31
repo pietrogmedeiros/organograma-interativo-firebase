@@ -1,0 +1,328 @@
+/* css/style.css - VERSÃO CORRIGIDA */
+:root {
+    --primary-color: #4285F4; /* Google Blue */
+    --bg-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-color: #3c4043;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* ADICIONADO: Nova regra para o container de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Aumentei um pouco o espaço para respirar melhor */
+}
+
+nav button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid #dadce0;
+    padding: 0.6rem 1.2rem;
+    /* margin-left: 0.5rem; */ /* ALTERADO: Removido, pois o 'gap' já faz o espaçamento */
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+
+nav button:hover {
+    border-color: var(--primary-color);
+    background-color: #e8f0fe;
+}
+
+nav button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+main {
+    padding: 2rem;
+}
+
+#chart-container {
+    width: 100%;
+    min-height: 75vh;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Para empilhar títulos e gráficos */
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.placeholder {
+    font-size: 1.2rem;
+    color: #5f6368;
+}
+
+/* Estilos para os cards do organograma (Google Charts) */
+.google-visualization-orgchart-node-medium { /* Classe padrão do Google Charts */
+    border: none !important;
+    border-radius: var(--border-radius) !important;
+    background: var(--card-bg) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15) !important;
+    padding: 0 !important;
+}
+
+.org-card {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.org-name {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.org-role {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #5f6368;
+}
+
+.dept-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #5f6368;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
+}
+
+/* Estilos para o novo seletor de departamento */
+.department-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* margin-left: 1rem; */ /* ALTERADO: Removido, pois o 'gap' da tag <nav> controla isso */
+}
+
+.department-selector label {
+    font-size: 0.9rem;
+    color: #5f6368;
+}
+
+#dept-select {
+    padding: 0.5rem;
+    border: 1px solid #dadce0;
+    border-radius: var(--border-radius);
+    background-color: var(--card-bg);
+    font-size: 0.9rem;
+}
+
+/* ==================== ESTILOS DO MODAL E FORMULÁRIO ==================== */
+
+/* O fundo escurecido que cobre a tela */
+.modal-overlay {
+    position: fixed; /* Fica fixo na tela mesmo com scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Garante que fique sobre todo o resto */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Classe para esconder o modal */
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none; /* Impede cliques quando estiver invisível */
+}
+
+/* A caixa branca do formulário */
+.modal-content {
+    background: var(--card-bg);
+    padding: 2rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px; /* Largura máxima do modal */
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.hidden .modal-content {
+    transform: scale(0.9);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Estilo para cada grupo de label + input */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Estilo para os campos de texto e selects */
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+/* Container para os botões de ação */
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Estilo geral para botões de formulário */
+.form-actions button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+.submit-button:hover {
+    background-color: #3367d6;
+}
+
+.cancel-button {
+    background-color: #f1f3f4;
+    color: var(--text-color);
+}
+.cancel-button:hover {
+    background-color: #e8eaed;
+}
+
+/* Estilo para o nosso novo botão "+ Adicionar" */
+.add-button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+.add-button:hover {
+    background-color: #3367d6 !important;
+}
+
+/* --- Estilos CORRIGIDOS para o botão de exclusão --- */
+.delete-btn {
+    position: absolute;
+    top: 4px;      /* Distância do topo do card */
+    right: 4px;     /* Distância da direita do card */
+    width: 18px;    /* Diminuí um pouco o tamanho */
+    height: 18px;   /* Diminuí um pouco o tamanho */
+    line-height: 18px; /* Centraliza o 'x' verticalmente */
+    text-align: center; /* Centraliza o 'x' horizontalmente */
+    background-color: #fce8e6;
+    color: #c53929;
+    border-radius: 50%;
+    font-size: 14px; /* Tamanho do 'x' */
+    font-weight: normal; /* Deixa o 'x' mais fino */
+    cursor: pointer;
+    opacity: 0; /* Inicia completamente invisível */
+    transition: all 0.2s ease-in-out;
+    z-index: 10; /* Garante que fique sobre o texto */
+}
+
+/* Mostra o botão quando o mouse está sobre o card */
+.google-visualization-orgchart-node-medium:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    background-color: #d93025;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Garante que o card seja o container de posicionamento */
+.org-card {
+    padding: 12px 16px;
+    text-align: left;
+    position: relative; /* Essencial para o posicionamento do .delete-btn */
+}
+
+.org-card {
+    padding: 12px 16px;
+    text-align: left;
+    position: relative; /* ADICIONADO */
+}
+
+.org-card:hover .delete-btn {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Precisamos adicionar position: relative ao card para o botão se posicionar corretamente */
+.org-card {
+    padding: 12px 16px;
+    text-align: left;
+    position: relative; /* ADICIONADO */
+}

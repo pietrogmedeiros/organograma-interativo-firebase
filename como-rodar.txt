@@ -1,0 +1,94 @@
+=====================================================
+      INSTRUÇÕES PARA EXECUTAR O PROJETO
+      ORGANOGRAMA INTERATIVO COM FIREBASE
+=====================================================
+
+Este documento descreve os passos necessários para configurar e executar a aplicação de organograma web.
+
+Pré-requisitos:
+- Conta no Google Firebase (https://firebase.google.com/)
+- Node.js e npm instalados na máquina (https://nodejs.org/)
+- Visual Studio Code (ou outro editor de código) com a extensão "Live Server" instalada.
+
+
+-----------------------------------------
+PASSO 1: CONFIGURAÇÃO DO PROJETO FIREBASE
+-----------------------------------------
+
+1. Crie um novo projeto no console do Firebase.
+
+2. Ative o Firestore Database:
+   - No painel do seu projeto, vá em "Firestore Database".
+   - Clique em "Criar banco de dados".
+   - Selecione a localização mais próxima dos seus usuários (ex: `southamerica-east1 (São Paulo)`).
+   - Inicie em "Modo de Produção" e vá para a aba "Regras".
+
+3. Configure as Regras de Segurança:
+   - Na aba "Regras" do Firestore, substitua o conteúdo pelo seguinte para permitir leitura e escrita durante o desenvolvimento:
+     ```
+     rules_version = '2';
+     service cloud.firestore {
+       match /databases/{database}/documents {
+         match /{document=**} {
+           allow read, write: if true;
+         }
+       }
+     }
+     ```
+   - Clique em "Publicar".
+   - ATENÇÃO: Para um ambiente de produção real, estas regras devem ser mais restritivas.
+
+4. Registre seu App da Web:
+   - Volte para as "Configurações do projeto" (ícone de engrenagem).
+   - Na aba "Geral", desça até "Seus apps" e clique no ícone da web (`</>`).
+   - Dê um nome ao app e registre. Não precisa configurar o "Firebase Hosting".
+
+
+---------------------------------------------------
+PASSO 2: MIGRAÇÃO DOS DADOS INICIAIS (SEEDING)
+---------------------------------------------------
+
+Este passo popula o seu banco de dados com os dados do arquivo `output.json`.
+
+1. Instale as dependências do Node.js:
+   - Abra um terminal na pasta raiz do projeto e execute:
+     ```bash
+     npm install
+     ```
+
+2. Obtenha a Chave de Administrador do Firebase:
+   - No console do Firebase, vá em "Configurações do projeto" > "Contas de serviço".
+   - Clique em "Gerar nova chave privada" e baixe o arquivo JSON.
+   - Renomeie este arquivo para `firebase-adminsdk.json` e coloque-o na pasta raiz do projeto.
+   - **IMPORTANTE:** Este arquivo é secreto e não deve ser compartilhado ou enviado para repositórios públicos como o GitHub.
+
+3. Execute o script de migração:
+   - No terminal, na raiz do projeto, execute:
+     ```bash
+     node seed.js
+     ```
+   - Verifique seu Firestore no console do Firebase; a coleção "colaboradores" deve estar populada.
+
+
+----------------------------------------
+PASSO 3: CONFIGURAÇÃO DO FRONTEND
+----------------------------------------
+
+1. Obtenha as Credenciais do App da Web:
+   - No console do Firebase, vá em "Configurações do projeto" > "Geral" > "Seus apps".
+   - Clique no seu app da web e selecione a opção "Config".
+   - Copie o objeto `firebaseConfig` completo.
+
+2. Insira as Credenciais no Código:
+   - Abra o arquivo `js/script.js`.
+   - Localize a constante `firebaseConfig` (próximo ao topo do arquivo).
+   - Cole o objeto que você copiou do Firebase dentro das chaves `{}`.
+
+   Exemplo de como deve ficar:
+   ```javascript
+   const firebaseConfig = {
+     apiKey: "AIza...",
+     authDomain: "seu-projeto.firebaseapp.com",
+     projectId: "seu-projeto",
+     // ... resto das chaves
+   };

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organograma da Empresa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Organograma Webcontinental</h1>
+       <nav>
+            <!-- BOTÃO ADICIONADO -->
+            <button id="btn-add-colaborador" class="add-button">+ Adicionar</button>
+            <button id="btn-view-all">Ver Todos os Departamentos</button>
+            <div class="department-selector">
+                <label for="dept-select">Ou filtre por um departamento:</label>
+                <select id="dept-select">
+                    <option value="">Selecione...</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="chart-container">
+            <p class="placeholder">Carregando aplicação...</p>
+        </div>
+    </main>
+
+    <!-- Google Charts Loader -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <!-- Nosso Script -->
+    <script type="module" src="js/script.js"></script>
+
+    <!-- ================== MODAL DE ADICIONAR COLABORADOR (NOVA SEÇÃO) ================== -->
+    <div id="add-colaborador-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <form id="add-colaborador-form">
+                <h2>Adicionar Novo Colaborador</h2>
+                <div class="form-group">
+                    <label for="colab-nome">Nome Completo</label>
+                    <input type="text" id="colab-nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="colab-cargo">Cargo</label>
+                    <input type="text" id="colab-cargo" name="cargo" required>
+                </div>
+                <div class="form-group">
+                    <label for="colab-depto">Departamento</label>
+                    <select id="colab-depto" name="departamento" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="colab-gestor">Gestor Direto</label>
+                    <select id="colab-gestor" name="gestor">
+                        <option value="">Nenhum (Nível mais alto)</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="btn-cancel-add" class="cancel-button">Cancelar</button>
+                    <button type="submit" class="submit-button">Salvar Colaborador</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ================================================================================= -->
+
+</body>
+</html>

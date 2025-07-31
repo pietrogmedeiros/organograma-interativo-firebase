@@ -1,0 +1,19 @@
+# Arquivos de configuração e chaves secretas do Firebase
+firebase-adminsdk.json
+
+# Pasta de dependências do Node.js
+node_modules/
+
+# Dados sensíveis ou arquivos de dados brutos
+colaboradores.json
+output.json
+colaboradores.csv
+
+# Arquivos de log do npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
