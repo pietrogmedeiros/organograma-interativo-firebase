@@ -1,19 +1,40 @@
-// js/script.js - VERSÃO COM CRUD (CREATE)
+// js/script.js - VERSÃO COM AUTENTICAÇÃO
 
 // --- IMPORTAÇÃO E CONFIGURAÇÃO DO FIREBASE ---
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+// ALTERADO: Adicionando as funções de autenticação
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 import { getFirestore, collection, getDocs, setDoc, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+
 const firebaseConfig = {
-apiKey: "AIzaSyD76HOZNa8yWSVmeJtrkxFmdxtsvlt2arY",
-  authDomain: "organograma-empresa.firebaseapp.com",
-  projectId: "organograma-empresa",
-  storageBucket: "organograma-empresa.firebasestorage.app",
-  messagingSenderId: "256795992111",
-  appId: "1:256795992111:web:6d8cb3e8e3ea5ae316a6da"
+    apiKey: "AIzaSyD76HOZNa8yWSVmeJtrkxFmdxtsvlt2arY",
+    authDomain: "organograma-empresa.firebaseapp.com",
+    projectId: "organograma-empresa",
+    storageBucket: "organograma-empresa.firebasestorage.app",
+    messagingSenderId: "256795992111",
+    appId: "1:256795992111:web:6d8cb3e8e3ea5ae316a6da"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app); // ADICIONADO: Inicializa o serviço de autenticação
+
+// --- VERIFICAÇÃO DE AUTENTICAÇÃO (BLOCO DE SEGURANÇA) ---
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+        // Se não há usuário logado, redireciona para a página de login
+        console.log("Usuário não logado. Redirecionando para /login.html");
+        window.location.href = '/login.html';
+    } else {
+        // Se o usuário está logado, podemos continuar
+        console.log("Usuário logado:", user.email);
+        // Exibe o email do usuário no header
+        const userInfo = document.getElementById('user-info');
+        if (userInfo) {
+            userInfo.textContent = user.email;
+        }
+    }
+});
 
 // --- ESTADO GLOBAL ---
 let colaboradoresData = [];
@@ -23,25 +44,22 @@ let departmentsList = [];
 const chartContainer = document.getElementById('chart-container');
 const btnViewAll = document.getElementById('btn-view-all');
 const deptSelect = document.getElementById('dept-select');
-
-// NOVO: Elementos do Modal
 const btnAddColaborador = document.getElementById('btn-add-colaborador');
 const addColaboradorModal = document.getElementById('add-colaborador-modal');
 const addColaboradorForm = document.getElementById('add-colaborador-form');
 const btnCancelAdd = document.getElementById('btn-cancel-add');
 const colabDeptoSelect = document.getElementById('colab-depto');
 const colabGestorSelect = document.getElementById('colab-gestor');
+const btnLogout = document.getElementById('btn-logout'); // ADICIONADO: Botão de Logout
 
 
 // --- FUNÇÃO PRINCIPAL ---
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Listeners dos botões de visualização
     btnViewAll.addEventListener('click', () => {
         setActiveButton(btnViewAll);
         deptSelect.value = "";
         renderAllDepartmentsView();
-        // NOVO: Listener para exclusão (delegação de eventos)
-    chartContainer.addEventListener('click', handleDeleteColaborador);
     });
 
     deptSelect.addEventListener('change', (event) => {
@@ -55,43 +73,47 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // NOVO: Listeners para o Modal
+    // Listeners do Modal de Adicionar
     btnAddColaborador.addEventListener('click', openAddModal);
     btnCancelAdd.addEventListener('click', closeAddModal);
     addColaboradorModal.addEventListener('click', (e) => {
-        // Fecha o modal se clicar fora da caixa de conteúdo
-        if (e.target === addColaboradorModal) {
-            closeAddModal();
-        }
+        if (e.target === addColaboradorModal) closeAddModal();
     });
     addColaboradorForm.addEventListener('submit', handleAddColaborador);
 
+    // Listener de exclusão
+    chartContainer.addEventListener('click', handleDeleteColaborador);
 
-    // Carregamento inicial dos dados
-    await loadInitialData();
+    // ADICIONADO: Listener do botão de Logout
+    btnLogout.addEventListener('click', async () => {
+        try {
+            await signOut(auth);
+            // O onAuthStateChanged vai detectar a saída e redirecionar automaticamente.
+        } catch (error) {
+            console.error("Erro ao fazer logout:", error);
+        }
+    });
+
+    // ALTERADO: A chamada inicial dos dados agora é feita após a verificação de login
+    loadInitialData();
 });
 
-// --- NOVO: LÓGICA DO MODAL E DO FORMULÁRIO ---
-
+// --- LÓGICA DO MODAL E DO FORMULÁRIO ---
+// (Nenhuma alteração nesta seção)
 function openAddModal() {
-    // Popula os dropdowns do formulário com os dados mais recentes
     populateFormField(colabDeptoSelect, departmentsList);
-    
-    // Pega todos os nomes de colaboradores para o campo de gestor
     const allColaboradoresNomes = colaboradoresData.map(c => c.Colaborador).sort();
-    populateFormField(colabGestorSelect, allColaboradoresNomes, true); // O 'true' indica para manter a opção "Nenhum"
-
+    populateFormField(colabGestorSelect, allColaboradoresNomes, true);
     addColaboradorModal.classList.remove('hidden');
 }
 
 function closeAddModal() {
-    addColaboradorForm.reset(); // Limpa o formulário
+    addColaboradorForm.reset();
     addColaboradorModal.classList.add('hidden');
 }
 
 async function handleAddColaborador(event) {
-    event.preventDefault(); // Previne o recarregamento da página
-    
+    event.preventDefault();
     const formData = new FormData(addColaboradorForm);
     const novoColaborador = {
         Colaborador: formData.get('nome'),
@@ -99,37 +121,27 @@ async function handleAddColaborador(event) {
         Departamento: formData.get('departamento'),
         Gestor: formData.get('gestor')
     };
-
-    // Gera um ID para o documento (usando o nome em minúsculo e com hífens)
     const docId = novoColaborador.Colaborador.replace(/\s+/g, '-').toLowerCase();
 
     try {
         setLoadingState("Salvando novo colaborador...");
-        // Salva o novo colaborador no Firestore
         await setDoc(doc(db, "colaboradores", docId), novoColaborador);
-        
         closeAddModal();
         setLoadingState("Colaborador salvo! Atualizando organograma...");
-        
-        // Recarrega todos os dados para refletir a mudança
         await loadInitialData();
-        renderAllDepartmentsView(); // Ou a visão que for mais apropriada
-
+        renderAllDepartmentsView();
     } catch (error) {
         console.error("❌ Erro ao salvar colaborador:", error);
         setErrorState("Não foi possível salvar. Tente novamente.");
     }
 }
 
-// Função genérica para popular dropdowns do formulário
 function populateFormField(selectElement, data, keepFirstOption = false) {
-    const firstOption = selectElement.options[0]; // Guarda a primeira opção (ex: "Nenhum")
-    selectElement.innerHTML = ''; // Limpa as opções antigas
-    
+    const firstOption = selectElement.options[0];
+    selectElement.innerHTML = '';
     if (keepFirstOption) {
         selectElement.appendChild(firstOption);
     }
-
     data.forEach(item => {
         const option = document.createElement('option');
         option.value = item;
@@ -140,17 +152,14 @@ function populateFormField(selectElement, data, keepFirstOption = false) {
 
 
 // --- FUNÇÕES DE CARREGAMENTO E RENDERIZAÇÃO ---
-
+// (Nenhuma alteração nesta seção)
 async function loadInitialData() {
     setLoadingState("Carregando dados...");
     try {
-        // Limpa os dados antigos antes de carregar novos
         colaboradoresData = [];
         departmentsList = [];
-
         const snapshot = await getDocs(collection(db, 'colaboradores'));
         snapshot.forEach(doc => colaboradoresData.push(doc.data()));
-        
         if (colaboradoresData.length > 0) {
             departmentsList = [...new Set(colaboradoresData.map(item => item.Departamento).sort())];
             populateDepartmentSelector();
@@ -165,12 +174,10 @@ async function loadInitialData() {
 }
 
 function populateDepartmentSelector() {
-    // Lógica para popular o seletor principal da página
     const currentSelection = deptSelect.value;
     const firstOption = deptSelect.options[0];
     deptSelect.innerHTML = '';
     deptSelect.appendChild(firstOption);
-
     departmentsList.forEach(dept => {
         const option = document.createElement('option');
         option.value = dept;
@@ -179,9 +186,6 @@ function populateDepartmentSelector() {
     });
     deptSelect.value = currentSelection;
 }
-
-// ... (O resto das funções de renderização: renderSingleDepartmentView, renderAllDepartmentsView, buildChartData, drawChart, etc., permanecem iguais à versão anterior)
-// Copie e cole as funções restantes da versão anterior aqui se necessário, elas não mudaram.
 
 function renderSingleDepartmentView(departmentName) {
     const data = colaboradoresData.filter(col => col.Departamento === departmentName);
@@ -246,9 +250,7 @@ function drawChart(container, data) {
 }
 
 function formatNode(nome, cargo) {
-    // Geramos um ID seguro para o elemento a partir do nome do colaborador
     const colaboradorId = nome.replace(/\s+/g, '-').toLowerCase();
-    
     return `<div class="org-card">
                 <div class="org-name">${nome}</div>
                 <div class="org-role">${cargo}</div>
@@ -276,38 +278,24 @@ function setErrorState(message) {
     chartContainer.style.justifyContent = 'center';
 }
 
-// --- NOVA FUNÇÃO DE EXCLUSÃO ---
 async function handleDeleteColaborador(event) {
-    // Verifica se o elemento clicado foi um botão de exclusão
     if (event.target.classList.contains('delete-btn')) {
-        
-        // Pega o ID do colaborador armazenado no atributo data-id
         const docId = event.target.dataset.id;
         const colaboradorNome = event.target.title.replace('Excluir ', '');
-
-        // Pede confirmação ao usuário
         const isConfirmed = confirm(`Tem certeza que deseja excluir ${colaboradorNome}? Esta ação não pode ser desfeita.`);
 
         if (isConfirmed) {
             try {
                 setLoadingState(`Excluindo ${colaboradorNome}...`);
-
-                // Usa o deleteDoc para remover o documento do Firestore
                 await deleteDoc(doc(db, "colaboradores", docId));
-
                 setLoadingState("Colaborador excluído! Atualizando organograma...");
-
-                // Recarrega os dados e redesenha a tela
                 await loadInitialData();
-                
-                // Redesenha a visão que estava ativa
                 const activeDept = deptSelect.value;
                 if(activeDept) {
                     renderSingleDepartmentView(activeDept);
                 } else {
                     renderAllDepartmentsView();
                 }
-
             } catch (error) {
                 console.error("❌ Erro ao excluir colaborador:", error);
                 setErrorState("Não foi possível excluir. Tente novamente.");

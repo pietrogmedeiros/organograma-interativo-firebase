@@ -138,7 +138,9 @@ main {
 .department-selector label {
     font-size: 0.9rem;
     color: #5f6368;
+    white-space: nowrap; /* Impede a quebra de linha */
 }
+
 
 #dept-select {
     padding: 0.5rem;
@@ -325,4 +327,14 @@ main {
     padding: 12px 16px;
     text-align: left;
     position: relative; /* ADICIONADO */
+}
+
+/* css/style.css - Adicione ao final */
+
+#user-info {
+    font-size: 0.9rem;
+    color: #5f6368;
+    border-right: 1px solid #e0e0e0;
+    padding-right: 1.5rem;
+    margin-right: -0.5rem; /* Ajuste para compensar o gap da nav */
 }

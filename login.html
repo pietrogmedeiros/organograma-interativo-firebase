@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Organograma Webcontinental</title>
+    <!-- Não precisamos do style.css principal, os estilos estão todos aqui -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- ESTILOS MELHORADOS PARA A PÁGINA DE LOGIN -->
+    <style>
+        :root {
+            --primary-color: #4285F4;
+            --card-bg: #ffffff;
+            --text-color: #3c4043;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            margin: 0;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 380px;
+            padding: 3rem;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transform: translateY(-20px);
+            animation: float-in 0.5s ease-out forwards;
+        }
+        
+        @keyframes float-in {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .login-container h1 {
+            font-weight: 500;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .login-container p.subtitle {
+            color: #5f6368;
+            margin-bottom: 2rem;
+        }
+
+        #login-error {
+            color: #d93025;
+            background-color: #fce8e6;
+            padding: 0.75rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2);
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 0.9rem;
+            border: none;
+            border-radius: 6px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .submit-button:hover {
+            background-color: #3367d6;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="login-container">
+        <h1>Acessar Organograma</h1>
+        <p class="subtitle">Faça login para continuar</p>
+        <form id="login-form">
+            <div id="login-error" class="hidden"></div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="submit-button">Entrar</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Script de Login -->
+    <script type="module" src="js/login.js"></script>
+
+</body>
+</html>

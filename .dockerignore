@@ -1,0 +1,14 @@
+# Ignorar a pasta de módulos do Node (se existir)
+node_modules
+
+# Ignorar o arquivo de chave secreta do Firebase Admin
+firebase-adminsdk.json
+
+# Ignorar arquivos do Docker e do Git
+Dockerfile
+.dockerignore
+.git
+.gitignore
+
+# Ignorar arquivos do VSCode
+.vscode
