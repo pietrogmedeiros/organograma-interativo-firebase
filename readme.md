@@ -1,93 +1,89 @@
-# 📊 Organograma Interativo com Firebase
+# Organograma Interativo com Firebase e Docker
 
 
+## 📜 Sobre o Projeto
 
-## 📑 Sobre o Projeto
+Este projeto é uma aplicação web moderna e interativa para visualização e gerenciamento de organogramas empresariais. Desenvolvido com tecnologias frontend puras e integrado com o Firebase, ele oferece uma solução dinâmica, em tempo real e segura para gerenciar a estrutura de uma equipe.
 
-O **Organograma Interativo** é uma aplicação web moderna e dinâmica projetada para visualizar e gerenciar a estrutura hierárquica de uma empresa. Construído com tecnologias web padrão e integrado ao poder do **Google Firebase**, este projeto oferece uma solução em tempo real, escalável e de fácil manutenção para qualquer organização.
-
-A aplicação permite não apenas a visualização clara dos departamentos e da cadeia de comando, mas também o gerenciamento completo de colaboradores, incluindo a adição e remoção de membros diretamente pela interface.
+A aplicação conta com um sistema de autenticação, permitindo que apenas usuários autorizados acessem e modifiquem os dados.
 
 ---
 
 ## ✨ Funcionalidades Principais
 
-*   **Visualização Dinâmica**: Renderiza organogramas claros e interativos usando a biblioteca Google Charts.
-*   **Backend Serverless**: Utiliza o **Firebase Firestore** como um banco de dados NoSQL em tempo real, eliminando a necessidade de um servidor tradicional.
-*   **Filtragem por Departamento**: Permite visualizar a estrutura completa da empresa ou focar em departamentos específicos através de um menu dropdown.
-*   **Gerenciamento CRUD Completo**:
-    *   **Adicionar Colaborador**: Um formulário modal intuitivo para cadastrar novos membros.
-    *   **Excluir Colaborador**: Remoção de membros com um clique (e confirmação), atualizando a estrutura em tempo real.
-    *   *(Em desenvolvimento: Edição de colaboradores e gerenciamento de departamentos).*
-*   **Interface Limpa e Responsiva**: Design moderno e funcional construído com HTML5 e CSS3.
+*   **Autenticação de Usuários:** Tela de login segura para acesso ao sistema.
+*   **Visualização Hierárquica:** Organogramas gerados dinamicamente com base nos dados.
+*   **Filtragem por Departamento:** Visualize o organograma completo ou filtre por departamentos específicos através de um menu dropdown.
+*   **CRUD de Colaboradores:**
+    *   **Adicionar:** Crie novos colaboradores através de um formulário intuitivo.
+    *   **Excluir:** Remova colaboradores diretamente pela interface do organograma.
+*   **Backend Serverless:** Utiliza Firebase (Firestore e Authentication) para um backend robusto, escalável e em tempo real.
+*   **Pronto para Implantação:** O projeto inclui um `Dockerfile` para fácil "containerização" e implantação em qualquer ambiente de nuvem.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-Este projeto foi construído utilizando as seguintes tecnologias:
-
-*   **Frontend**:
-    *   ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-    *   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-    *   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) (ES6 Modules)
-*   **Backend & Banco de Dados**:
-    *   ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black) (Firestore Database)
-*   **Visualização de Dados**:
-    *   **Google Charts**
+*   **Frontend:** HTML5, CSS3, JavaScript (ES6 Modules)
+*   **Banco de Dados:** [Google Firestore](https://firebase.google.com/docs/firestore) (NoSQL, em tempo real)
+*   **Autenticação:** [Firebase Authentication](https://firebase.google.com/docs/auth) (Login com E-mail/Senha)
+*   **Biblioteca de Gráficos:** [Google Charts](https://developers.google.com/chart)
+*   **Containerização:** [Docker](https://www.docker.com/) com NGINX
 
 ---
 
-## 🛠️ Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 
-Siga os passos abaixo para configurar e rodar uma cópia local desta aplicação.
+Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
 
 ### Pré-requisitos
 
-*   Você precisa ter uma conta no [Google Firebase](https://firebase.google.com/).
-*   É necessário ter o [Node.js](https://nodejs.org/) (que inclui o npm) instalado em sua máquina.
-*   Um editor de código como o [VS Code](https://code.visualstudio.com/) com a extensão **Live Server**.
+*   [Node.js](https://nodejs.org/en/) (para o script de migração de dados inicial)
+*   [Docker Desktop](https://www.docker.com/products/docker-desktop) instalado e em execução.
+*   Uma conta no [Firebase](https://firebase.google.com/).
 
-### Passo a Passo
+### Configuração do Firebase
 
-1.  **Clone o Repositório**
+1.  Crie um novo projeto no console do Firebase.
+2.  No seu projeto, vá para **Firestore Database** e crie um novo banco de dados (pode iniciar em modo de teste).
+3.  Vá para **Authentication**, na aba "Método de login", e ative o provedor **"E-mail/senha"**.
+4.  Crie um usuário de teste na aba "Usuários" do Authentication.
+5.  Vá para **Configurações do Projeto** (ícone de engrenagem) e, em "Seus apps", registre um novo app da Web. Copie o objeto `firebaseConfig`.
+
+### Configuração Local
+
+1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    cd seu-repositorio
+    git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+    cd SEU_REPOSITORIO
     ```
 
-2.  **Configure o Firebase**
-    *   Crie um novo projeto no console do Firebase.
-    *   Ative o **Firestore Database** em modo de teste ou configure as [regras de segurança](#regras-de-segurança) para permitir leitura e escrita.
-    *   Nas configurações do projeto, registre um novo **App da Web**.
+2.  **Configure as credenciais:**
+    *   No arquivo `js/script.js`, cole o objeto `firebaseConfig` que você copiou do console.
+    *   Faça o mesmo no arquivo `js/login.js`.
 
-3.  **Configure as Variáveis de Ambiente**
-    *   No seu projeto Firebase, vá em "Configurações do projeto" e copie o objeto de configuração `firebaseConfig`.
-    *   Abra o arquivo `js/script.js` e cole suas credenciais na constante `firebaseConfig`.
-    ```javascript
-    const firebaseConfig = {
-      apiKey: "SUA_API_KEY",
-      authDomain: "SEU_AUTH_DOMAIN",
-      // ...etc
-    };
-    ```
+3.  **(Opcional) Migração de Dados Iniciais:**
+    *   Para popular o banco com dados iniciais (a partir de `output.json`), você precisará de uma chave de serviço do Firebase.
+    *   Vá em Configurações do Projeto > Contas de serviço e gere uma nova chave privada. Salve o arquivo como `firebase-adminsdk.json` na raiz do projeto. **Este arquivo está no `.gitignore` e não deve ser "commitado"**.
+    *   Instale as dependências: `npm install firebase-admin`
+    *   Execute o script de migração: `node seed.js`
 
-4.  **Popule o Banco de Dados (Opcional)**
-    *   Se você possui dados iniciais (como o arquivo `output.json` deste projeto), pode populá-los no Firestore.
-    *   Obtenha sua chave de administrador em "Configurações do projeto" > "Contas de serviço", gere uma nova chave privada e salve o arquivo como `firebase-adminsdk.json` na raiz do projeto.
-    *   Instale as dependências e execute o script de _seeding_:
+### Executando com Docker
+
+Esta é a maneira recomendada para rodar a aplicação.
+
+1.  **Construa a imagem Docker:**
     ```bash
-    npm install
-    node seed.js
+    docker build -t organograma-app .
     ```
 
-5.  **Inicie a Aplicação**
-    *   Abra o projeto no VS Code.
-    *   Clique com o botão direito no arquivo `index.html`.
-    *   Selecione **"Open with Live Server"**.
+2.  **Execute o contêiner:**
+    ```bash
+    docker run -d -p 8080:80 --name organograma-container organograma-app
+    ```
 
-A aplicação será aberta em seu navegador, pronta para uso!
+3.  Abra seu navegador e acesse **`http://localhost:8080`**. Você será direcionado para a tela de login.
 
 ---
 
-Feito com ❤️ por Pietro Medeiros
+**Pietro Medeiros** | [Meu Linkedin](https://www.linkedin.com/in/pietro-medeiros-770bba162/)
