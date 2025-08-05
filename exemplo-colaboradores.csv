@@ -1,0 +1,14 @@
+Nome,Cargo,Departamento,Superior Imediato,Área
+Eloana Antoniazi,Presidente,Presidência,,Gestão Executiva
+João Silva,Desenvolvedor,Tecnologia,Maria Santos,Desenvolvimento
+Maria Santos,Gerente de TI,Tecnologia,Eloana Antoniazi,Gestão
+Pedro Costa,Analista de Vendas,Vendas,Eloana Antoniazi,Vendas Corporativas
+Carlos Lima,Designer,Criativo,Roberta Silva,Design Gráfico
+Roberta Silva,Coordenadora Criativa,Criativo,Eloana Antoniazi,Gestão
+Lucia Ferreira,Analista de RH,Recursos Humanos,Paulo Mendes,Recrutamento
+Paulo Mendes,Gerente de RH,Recursos Humanos,Eloana Antoniazi,Gestão
+Fernanda Costa,Contadora,Financeiro,Ricardo Alves,Contabilidade
+Ricardo Alves,Controller,Financeiro,Eloana Antoniazi,Gestão
+Marcos Oliveira,Analista de Marketing,Marketing,Juliana Lima,Marketing Digital
+Juliana Lima,Coordenadora de Marketing,Marketing,Eloana Antoniazi,Gestão
+Patricia Santos,Assistente Administrativa,Administração,Eloana Antoniazi,Administração Geral 

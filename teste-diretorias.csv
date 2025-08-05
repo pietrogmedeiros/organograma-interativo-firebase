@@ -1,0 +1,13 @@
+Nome,Cargo,Departamento,Superior Imediato,Área
+Eloana Antoniazi,Presidente,Presidência,,Gestão Executiva
+João Silva,Diretor de TI,Diretoria de Tecnologia,Eloana Antoniazi,Tecnologia
+Maria Santos,Gerente de Desenvolvimento,Diretoria de Tecnologia,João Silva,Desenvolvimento
+Pedro Costa,Analista de Sistemas,Diretoria de Tecnologia,Maria Santos,Desenvolvimento
+Carlos Lima,Gerente de Vendas,Diretoria Comercial,Eloana Antoniazi,Vendas Corporativas
+Roberta Silva,Analista de Vendas,Diretoria Comercial,Carlos Lima,Vendas Corporativas
+Lucia Ferreira,Diretora de RH,Diretoria de Recursos Humanos,Eloana Antoniazi,RH
+Paulo Mendes,Gerente de Recrutamento,Diretoria de Recursos Humanos,Lucia Ferreira,Recrutamento
+Fernanda Costa,Analista de RH,Diretoria de Recursos Humanos,Paulo Mendes,Recrutamento
+Ricardo Alves,Diretor Financeiro,Diretoria Financeira,Eloana Antoniazi,Financeiro
+Marcos Oliveira,Controller,Diretoria Financeira,Ricardo Alves,Contabilidade
+Patricia Santos,Analista Financeiro,Diretoria Financeira,Marcos Oliveira,Contabilidade 

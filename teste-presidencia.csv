@@ -1,0 +1,13 @@
+Nome,Cargo,Departamento,Superior Imediato,Área
+Eloana Antoniazzi,Presidente,Presidência,,Gestão Executiva
+João Silva,Diretor de TI,Diretoria de Tecnologia,Eloana Antoniazzi,Tecnologia
+Maria Santos,Diretora de Vendas,Diretoria Comercial,Eloana Antoniazzi,Vendas
+Pedro Costa,Diretor Financeiro,Diretoria Financeira,Eloana Antoniazzi,Financeiro
+
+Carlos Lima,Diretor de Marketing,Diretoria de Marketing,Eloana Antoniazzi,Marketing
+Roberta Silva,Diretora de Operações,Diretoria de Operações,Eloana Antoniazzi,Operações
+Lucia Ferreira,Diretora Jurídica,Diretoria Jurídica,Eloana Antoniazzi,Jurídico
+Paulo Mendes,Diretor de Inovação,Diretoria de Inovação,Eloana Antoniazzi,Inovação
+Fernanda Costa,Diretora de Qualidade,Diretoria de Qualidade,Eloana Antoniazzi,Qualidade
+Ricardo Alves,Diretor de Segurança,Diretoria de Segurança,Eloana Antoniazzi,Segurança
+Marcos Oliveira,Diretor de Comunicação,Diretoria de Comunicação,Eloana Antoniazzi,Comunicação 

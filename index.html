@@ -3,37 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organograma da Empresa</title>
+    <title>Governança Corporativa - Organograma</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Organograma Webcontinental</h1>
-       <nav>
-            <!-- ÁREA DO USUÁRIO E LOGOUT ADICIONADA -->
-            <div id="user-info"></div>
-            <button id="btn-logout" class="cancel-button">Sair</button>
-            
-            <!-- SEUS BOTÕES EXISTENTES -->
-            <button id="btn-add-colaborador" class="add-button">+ Adicionar</button>
-            <button id="btn-view-all">Ver Todos os Departamentos</button>
-            <div class="department-selector">
-                <label for="dept-select">Ou filtre por um departamento:</label>
-                <select id="dept-select">
-                    <option value="">Selecione...</option>
-                </select>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <h3>Menu</h3>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <div id="chart-container">
-            <p class="placeholder">Carregando aplicação...</p>
+            <button class="sidebar-toggle" id="sidebar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </main>
+        
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">
+                        <span class="sidebar-icon">👑</span>
+                        <span class="sidebar-text">Presidência</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#" class="sidebar-menu-link">
+                        <span class="sidebar-icon">🏢</span>
+                        <span class="sidebar-text">Diretorias</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <header>
+            <div class="header-left">
+                <div class="header-logo">
+                    <img src="webcontinental.png" alt="Webcontinental Logo" class="header-logo-img">
+                    <h1>Governança Corporativa - Organograma</h1>
+                </div>
+            </div>
+            
+            <nav class="header-nav">
+                <div class="header-buttons">
+                    <button id="btn-view-all" class="btn btn-secondary">Todos</button>
+                    <button id="btn-logout" class="btn btn-danger">Sair</button>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="department-selector">
+                        <label for="dept-select">Filtrar:</label>
+                        <select id="dept-select">
+                            <option value="">Selecione um departamento</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="chart-container">
+                <p class="placeholder">Carregando aplicação...</p>
+            </div>
+        </main>
+    </div>
 
     <!-- Google Charts Loader -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -41,34 +81,23 @@
     <!-- Nosso Script -->
     <script type="module" src="js/script.js"></script>
 
-    <!-- ================== MODAL DE ADICIONAR COLABORADOR (NOVA SEÇÃO) ================== -->
-    <div id="add-colaborador-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <form id="add-colaborador-form">
-                <h2>Adicionar Novo Colaborador</h2>
-                <div class="form-group">
-                    <label for="colab-nome">Nome Completo</label>
-                    <input type="text" id="colab-nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="colab-cargo">Cargo</label>
-                    <input type="text" id="colab-cargo" name="cargo" required>
-                </div>
-                <div class="form-group">
-                    <label for="colab-depto">Departamento</label>
-                    <select id="colab-depto" name="departamento" required></select>
-                </div>
-                <div class="form-group">
-                    <label for="colab-gestor">Gestor Direto</label>
-                    <select id="colab-gestor" name="gestor">
-                        <option value="">Nenhum (Nível mais alto)</option>
-                    </select>
-                </div>
-                <div class="form-actions">
-                    <button type="button" id="btn-cancel-add" class="cancel-button">Cancelar</button>
-                    <button type="submit" class="submit-button">Salvar Colaborador</button>
-                </div>
-            </form>
+
+
+    <!-- ================== MODAL DE CONFIRMAÇÃO DE EXCLUSÃO ================== -->
+    <div id="delete-confirmation-modal" class="modal-overlay hidden">
+        <div class="modal-content delete-confirmation">
+            <div class="confirmation-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#ef4444"/>
+                </svg>
+            </div>
+            <h2>Confirmar Exclusão</h2>
+            <p class="confirmation-message">Tem certeza que deseja excluir <strong id="delete-colaborador-name"></strong>?</p>
+            <p class="confirmation-warning">Esta ação não pode ser desfeita.</p>
+            <div class="form-actions">
+                <button type="button" id="btn-cancel-delete" class="cancel-button">Cancelar</button>
+                <button type="button" id="btn-confirm-delete" class="danger-button">Excluir Colaborador</button>
+            </div>
         </div>
     </div>
     <!-- ================================================================================= -->

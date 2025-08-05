@@ -1,93 +1,162 @@
-# 📊 Organograma Interativo com Firebase
+# Organograma Webcontinental
 
+Uma aplicação web moderna para visualização e gerenciamento de organogramas empresariais.
 
+## ✨ Características
 
-## 📑 Sobre o Projeto
+- **Design Moderno**: Interface profissional com gradientes, sombras e animações suaves
+- **Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- **Interativo**: Adicione, edite e remova colaboradores facilmente
+- **Filtros**: Visualize por departamento ou todos os colaboradores
+- **Autenticação**: Sistema de login seguro
+- **Visualização**: Organograma interativo usando Google Charts
 
-O **Organograma Interativo** é uma aplicação web moderna e dinâmica projetada para visualizar e gerenciar a estrutura hierárquica de uma empresa. Construído com tecnologias web padrão e integrado ao poder do **Google Firebase**, este projeto oferece uma solução em tempo real, escalável e de fácil manutenção para qualquer organização.
+## 🎨 Melhorias Visuais Implementadas
 
-A aplicação permite não apenas a visualização clara dos departamentos e da cadeia de comando, mas também o gerenciamento completo de colaboradores, incluindo a adição e remoção de membros diretamente pela interface.
+### Design System Moderno
+- **Paleta de Cores**: Cores profissionais e acessíveis
+- **Tipografia**: Fonte Inter para melhor legibilidade
+- **Gradientes**: Efeitos visuais modernos
+- **Sombras**: Sistema de sombras consistente
+- **Animações**: Transições suaves e feedback visual
 
----
+### Componentes Melhorados
+- **Header**: Com backdrop-filter e gradiente no título
+- **Botões**: Estados hover com animações
+- **Cards**: Elevação e hover effects
+- **Modal**: Design profissional com animações
+- **Formulários**: Campos com foco e validação visual
 
-## ✨ Funcionalidades Principais
+### Responsividade
+- Layout adaptativo para diferentes tamanhos de tela
+- Navegação otimizada para mobile
+- Formulários responsivos
 
-*   **Visualização Dinâmica**: Renderiza organogramas claros e interativos usando a biblioteca Google Charts.
-*   **Backend Serverless**: Utiliza o **Firebase Firestore** como um banco de dados NoSQL em tempo real, eliminando a necessidade de um servidor tradicional.
-*   **Filtragem por Departamento**: Permite visualizar a estrutura completa da empresa ou focar em departamentos específicos através de um menu dropdown.
-*   **Gerenciamento CRUD Completo**:
-    *   **Adicionar Colaborador**: Um formulário modal intuitivo para cadastrar novos membros.
-    *   **Excluir Colaborador**: Remoção de membros com um clique (e confirmação), atualizando a estrutura em tempo real.
-    *   *(Em desenvolvimento: Edição de colaboradores e gerenciamento de departamentos).*
-*   **Interface Limpa e Responsiva**: Design moderno e funcional construído com HTML5 e CSS3.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-Este projeto foi construído utilizando as seguintes tecnologias:
-
-*   **Frontend**:
-    *   ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-    *   ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-    *   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) (ES6 Modules)
-*   **Backend & Banco de Dados**:
-    *   ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black) (Firestore Database)
-*   **Visualização de Dados**:
-    *   **Google Charts**
-
----
-
-## 🛠️ Como Executar o Projeto
-
-Siga os passos abaixo para configurar e rodar uma cópia local desta aplicação.
+## 🚀 Como Executar
 
 ### Pré-requisitos
+- Node.js (versão 14 ou superior)
+- NPM ou Yarn
 
-*   Você precisa ter uma conta no [Google Firebase](https://firebase.google.com/).
-*   É necessário ter o [Node.js](https://nodejs.org/) (que inclui o npm) instalado em sua máquina.
-*   Um editor de código como o [VS Code](https://code.visualstudio.com/) com a extensão **Live Server**.
+### Instalação
 
-### Passo a Passo
+1. Clone o repositório:
+```bash
+git clone [url-do-repositorio]
+cd organograma-webcontinental
+```
 
-1.  **Clone o Repositório**
-    ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    cd seu-repositorio
-    ```
+2. Instale as dependências:
+```bash
+npm install
+```
 
-2.  **Configure o Firebase**
-    *   Crie um novo projeto no console do Firebase.
-    *   Ative o **Firestore Database** em modo de teste ou configure as [regras de segurança](#regras-de-segurança) para permitir leitura e escrita.
-    *   Nas configurações do projeto, registre um novo **App da Web**.
+3. Execute o projeto:
+```bash
+npm start
+```
 
-3.  **Configure as Variáveis de Ambiente**
-    *   No seu projeto Firebase, vá em "Configurações do projeto" e copie o objeto de configuração `firebaseConfig`.
-    *   Abra o arquivo `js/script.js` e cole suas credenciais na constante `firebaseConfig`.
-    ```javascript
-    const firebaseConfig = {
-      apiKey: "SUA_API_KEY",
-      authDomain: "SEU_AUTH_DOMAIN",
-      // ...etc
-    };
-    ```
+4. Acesse no navegador:
+```
+http://localhost:3000
+```
 
-4.  **Popule o Banco de Dados (Opcional)**
-    *   Se você possui dados iniciais (como o arquivo `output.json` deste projeto), pode populá-los no Firestore.
-    *   Obtenha sua chave de administrador em "Configurações do projeto" > "Contas de serviço", gere uma nova chave privada e salve o arquivo como `firebase-adminsdk.json` na raiz do projeto.
-    *   Instale as dependências e execute o script de _seeding_:
-    ```bash
-    npm install
-    node seed.js
-    ```
+### Com Docker
 
-5.  **Inicie a Aplicação**
-    *   Abra o projeto no VS Code.
-    *   Clique com o botão direito no arquivo `index.html`.
-    *   Selecione **"Open with Live Server"**.
+```bash
+docker build -t organograma .
+docker run -p 3000:3000 organograma
+```
 
-A aplicação será aberta em seu navegador, pronta para uso!
+## 📁 Estrutura do Projeto
+
+```
+organograma-webcontinental/
+├── css/
+│   └── style.css          # Estilos modernos e responsivos
+├── js/
+│   ├── login.js           # Lógica de autenticação
+│   └── script.js          # Lógica principal da aplicação
+├── data/                  # Dados do organograma
+├── index.html             # Página principal
+├── login.html             # Página de login
+├── package.json           # Dependências do projeto
+└── readme.md             # Este arquivo
+```
+
+## 🎯 Funcionalidades
+
+### Autenticação
+- Login seguro com validação
+- Sessão persistente
+- Logout funcional
+
+### Gerenciamento de Colaboradores
+- Adicionar novos colaboradores
+- Editar informações existentes
+- Remover colaboradores
+- Definir hierarquia organizacional
+
+### Visualização
+- Organograma interativo
+- Filtros por departamento
+- Visualização completa da empresa
+- Navegação intuitiva
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend**: HTML5, CSS3, JavaScript ES6+
+- **Charts**: Google Charts API
+- **Fontes**: Inter (Google Fonts)
+- **Deploy**: Docker, Nginx
+- **Estilo**: CSS Custom Properties, Flexbox, Grid
+
+## 🎨 Design System
+
+### Cores
+- **Primária**: #2563eb (Azul)
+- **Secundária**: #64748b (Cinza)
+- **Sucesso**: #10b981 (Verde)
+- **Aviso**: #f59e0b (Amarelo)
+- **Erro**: #ef4444 (Vermelho)
+
+### Tipografia
+- **Família**: Inter
+- **Pesos**: 400, 500, 600, 700
+- **Tamanhos**: Sistema escalável
+
+### Espaçamento
+- Sistema de espaçamento consistente
+- Variáveis CSS para manutenibilidade
+
+## 📱 Responsividade
+
+A aplicação é totalmente responsiva e funciona em:
+- **Desktop**: 1200px+
+- **Tablet**: 768px - 1199px
+- **Mobile**: < 768px
+
+## 🔧 Personalização
+
+O design pode ser facilmente personalizado através das variáveis CSS em `css/style.css`:
+
+```css
+:root {
+    --primary-color: #2563eb;
+    --bg-primary: #f8fafc;
+    --text-primary: #1e293b;
+    /* ... outras variáveis */
+}
+```
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Por favor, leia as diretrizes de contribuição antes de submeter pull requests.
 
 ---
 
-Feito com ❤️ por Pietro Medeiros
+**Desenvolvido com ❤️ para Webcontinental**

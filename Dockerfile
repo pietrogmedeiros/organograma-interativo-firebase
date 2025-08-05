@@ -1,20 +1,29 @@
-# Estágio 1: Usar uma imagem oficial e leve do NGINX
-# 'alpine' é uma versão mínima do Linux, resultando em uma imagem final muito pequena.
+# ==================== DOCKERFILE OTIMIZADO ====================
+# Estágio 1: Usar uma imagem oficial e leve do NGINX Alpine
+# Alpine é uma versão mínima do Linux, resultando em uma imagem final muito pequena (~5MB)
 FROM nginx:1.25-alpine
 
-# Remove a configuração padrão do NGINX
-RUN rm /etc/nginx/conf.d/default.conf
+# Define variáveis de ambiente para melhor manutenção
+ENV NGINX_CONF_DIR=/etc/nginx/conf.d
+ENV NGINX_HTML_DIR=/usr/share/nginx/html
 
-# Copia a nossa configuração personalizada do NGINX para dentro do contêiner
-COPY nginx.conf /etc/nginx/conf.d/
+# Remove a configuração padrão do NGINX para evitar conflitos
+RUN rm -f /etc/nginx/conf.d/default.conf
 
-# Copia todos os arquivos da nossa aplicação (html, css, js) para o diretório raiz do NGINX
-# O NGINX por padrão serve arquivos a partir de /usr/share/nginx/html
-COPY . /usr/share/nginx/html
+# Copia a nossa configuração personalizada do NGINX
+COPY nginx.conf ${NGINX_CONF_DIR}/
 
-# Expõe a porta 80 do contêiner para o mundo exterior
-# O NGINX escuta na porta 80 por padrão
+# Copia todos os arquivos da aplicação para o diretório do NGINX
+# Inclui: HTML, CSS, JS, imagens e outros assets
+COPY . ${NGINX_HTML_DIR}/
+
+# Define permissões corretas para segurança
+RUN chown -R nginx:nginx ${NGINX_HTML_DIR} && \
+    chmod -R 755 ${NGINX_HTML_DIR}
+
+# Expõe a porta 80 do contêiner
 EXPOSE 80
 
-# Comando para iniciar o NGINX quando o contêiner for executado
+# Comando para iniciar o NGINX em modo foreground
+# -g "daemon off" força o NGINX a rodar em primeiro plano
 CMD ["nginx", "-g", "daemon off;"]

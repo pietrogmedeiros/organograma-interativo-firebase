@@ -1,14 +1,84 @@
-# Ignorar a pasta de módulos do Node (se existir)
-node_modules
+# ==================== DOCKERIGNORE ====================
+# Arquivos e diretórios que devem ser ignorados durante o build do Docker
 
-# Ignorar o arquivo de chave secreta do Firebase Admin
-firebase-adminsdk.json
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
 
-# Ignorar arquivos do Docker e do Git
-Dockerfile
-.dockerignore
+# Arquivos de desenvolvimento
 .git
 .gitignore
+README.md
+*.md
+.env
+.env.local
+.env.development
+.env.test
+.env.production
 
-# Ignorar arquivos do VSCode
-.vscode
+# Arquivos de IDE/Editor
+.vscode/
+.idea/
+*.sublime-*
+.atom/
+.brackets.json
+
+# Arquivos de log
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Arquivos de cache
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+dist/
+build/
+
+# Arquivos de dependências (se houver)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Arquivos de teste
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+
+# Arquivos de documentação
+docs/
+documentation/
+*.pdf
+*.doc
+*.docx
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+
+# Arquivos Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.yaml
+
+# Arquivos de configuração local
+*.local
+local.*
