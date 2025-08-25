@@ -1,0 +1,19 @@
+# Ignore node and dev files when submitting source to Cloud Build/Run
+node_modules/
+.git/
+.vscode/
+.DS_Store
+*.log
+*.bak
+*.backup
+*.old
+*.swp
+*.swo
+
+# Local data and secrets
+*.csv
+output.json
+firebase-adminsdk.json
+
+# Docker cache/locks
+package-lock.json

@@ -1,0 +1,27 @@
+services:
+  web:
+    image: organograma-web:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+  - "8080:8080"
+    restart: unless-stopped
+    # Montar apenas o arquivo de config (opcional) e assets estáticos, se quiser hot-reload.
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
+
+  tools:
+    build:
+      context: .
+      dockerfile: Dockerfile.tools
+    image: organograma-tools:latest
+    working_dir: /app
+    volumes:
+      - type: bind
+        source: ./firebase-adminsdk.json
+        target: /app/firebase-adminsdk.json
+        read_only: true
+    entrypoint: ["sh", "-c"]
+    # Exemplo de uso: docker compose run --rm tools npm run migrate-csv -- ./base_atualizada_colaboradores.csv
+    command: ["node -v && npm -v"]
