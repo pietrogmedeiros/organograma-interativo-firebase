@@ -21,8 +21,8 @@ COPY . ${NGINX_HTML_DIR}/
 RUN chown -R nginx:nginx ${NGINX_HTML_DIR} && \
     chmod -R 755 ${NGINX_HTML_DIR}
 
-# Expõe a porta 80 do contêiner
-EXPOSE 80
+# Expõe a porta 8080 do contêiner (Cloud Run usa 8080)
+EXPOSE 8080
 
 # Comando para iniciar o NGINX em modo foreground
 # -g "daemon off" força o NGINX a rodar em primeiro plano

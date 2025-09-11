@@ -25,9 +25,10 @@ steps:
   - --platform=managed
   - --allow-unauthenticated
   - --port=8080
-  - --memory=256Mi
+  - --memory=512Mi
   - --cpu=1
   - --max-instances=3
+  - --timeout=300
 
 substitutions:
   _REGION: us-central1
