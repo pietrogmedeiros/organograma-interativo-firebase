@@ -679,20 +679,77 @@ async function confirmReassignAndDelete(newManager) {
 async function deleteColaborador(colaborador) {
     try {
         const nome = getNome(colaborador);
+        console.log('🔥 INICIANDO EXCLUSÃO:', nome);
         
         // Excluir do Firestore
         if (firestoreDb) {
             const docId = buildDocId(nome);
-            await deleteDoc(doc(firestoreDb, 'colaboradores', docId));
-            console.log('✅ Colaborador excluído do Firestore');
+            console.log('🔥 Doc ID a ser excluído:', docId);
+            
+            // Verificar se documento existe antes de excluir
+            const docRef = doc(firestoreDb, 'colaboradores', docId);
+            const docSnap = await getDoc(docRef);
+            
+            if (docSnap.exists()) {
+                console.log('🔥 Documento encontrado, excluindo...');
+                await deleteDoc(docRef);
+                console.log('✅ Colaborador excluído do Firestore com sucesso!');
+            } else {
+                console.warn('⚠️ Documento não encontrado no Firestore:', docId);
+                
+                // Listar alguns documentos para debug
+                console.log('🔍 Listando documentos existentes para debug...');
+                const querySnapshot = await getDocs(collection(firestoreDb, 'colaboradores'));
+                const existingDocs = [];
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const docNome = getNome(data);
+                    if (docNome.toLowerCase().includes('pietro') || docNome.toLowerCase().includes('medeiros')) {
+                        existingDocs.push({
+                            id: doc.id,
+                            nome: docNome,
+                            buildId: buildDocId(docNome)
+                        });
+                    }
+                });
+                console.log('🔍 Documentos com "pietro" ou "medeiros":', existingDocs);
+                
+                // Tentar encontrar por nome similar
+                let foundDoc = null;
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const docNome = getNome(data);
+                    if (docNome.toLowerCase() === nome.toLowerCase()) {
+                        foundDoc = { id: doc.id, data: data };
+                        console.log('🎯 Documento encontrado com nome exato! ID:', doc.id);
+                    }
+                });
+                
+                if (foundDoc) {
+                    console.log('🔥 Tentando excluir com ID correto:', foundDoc.id);
+                    await deleteDoc(doc(firestoreDb, 'colaboradores', foundDoc.id));
+                    console.log('✅ Colaborador excluído com ID correto!');
+                } else {
+                    console.error('❌ Documento não encontrado mesmo com busca por nome');
+                }
+            }
+        } else {
+            console.error('❌ Firestore não inicializado!');
         }
         
         // Excluir do array local
         const index = colaboradoresData.findIndex(col => 
             getNome(col).toLowerCase() === nome.toLowerCase()
         );
+        
+        console.log('🔥 Índice no array local:', index);
+        
         if (index !== -1) {
             colaboradoresData.splice(index, 1);
+            console.log('✅ Colaborador removido do array local');
+            console.log('🔥 Total de colaboradores restantes:', colaboradoresData.length);
+        } else {
+            console.warn('⚠️ Colaborador não encontrado no array local');
         }
         
         // Re-renderizar a view atual
@@ -705,6 +762,7 @@ async function deleteColaborador(colaborador) {
         alert('Colaborador excluído com sucesso!');
     } catch (err) {
         console.error('❌ Erro ao excluir colaborador:', err);
+        console.error('❌ Stack trace:', err.stack);
         alert('Erro ao excluir. Verifique o console.');
     }
 }
@@ -862,7 +920,9 @@ function ensureGoogleChartsLoaded() {
 // Carregar dados iniciais
 async function loadFirebaseData() {
     try {
-        console.log('🔥 Forçando carregamento do Firebase...');
+        console.log('🔥 CARREGANDO DADOS DO FIREBASE...');
+        console.log('🔥 Dados locais antes do carregamento:', colaboradoresData.length, 'colaboradores');
+        
         if (!firestoreDb) {
             console.warn('⚠️ Firestore não inicializado');
             return false;
@@ -871,10 +931,13 @@ async function loadFirebaseData() {
         const snap = await getDocs(collection(firestoreDb, 'colaboradores'));
         const arr = snap.docs.map(d => d.data());
         
+        console.log('🔥 Dados encontrados no Firebase:', arr.length, 'colaboradores');
+        
         if (arr.length > 0) {
             colaboradoresData = arr;
             dataLoaded = true;
             console.log(`✅ ${colaboradoresData.length} colaboradores carregados do Firebase!`);
+            console.log('✅ Dados locais substituídos por dados do Firebase');
             
             // Renderizar imediatamente
             if (!currentSelectedPerson) {
@@ -889,6 +952,7 @@ async function loadFirebaseData() {
         }
     } catch (error) {
         console.error('❌ Erro ao carregar dados do Firebase:', error);
+        console.error('❌ Stack trace:', error.stack);
         return false;
     }
 }
