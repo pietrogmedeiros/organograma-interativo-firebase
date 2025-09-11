@@ -73,12 +73,15 @@ documentation/
 *.backup
 *.old
 
-# Arquivos Docker
-Dockerfile
+# Arquivos Docker (não ignorar o Dockerfile/compose)
 .dockerignore
-docker-compose.yml
-docker-compose.yaml
 
 # Arquivos de configuração local
 *.local
 local.*
+
+# Bases/arquivos locais que não devem ir para a imagem
+*.csv
+*.json.save
+output.json
+firebase-adminsdk.json

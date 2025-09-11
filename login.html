@@ -211,6 +211,13 @@
     </style>
 </head>
 <body>
+        <script>
+            // Se já possui sessão armazenada, envia direto para o app
+            try {
+                const u = localStorage.getItem('user');
+                if (u) window.location.replace('index.html');
+            } catch {}
+        </script>
 
     <main class="login-container">
         <img src="webcontinental.png" alt="Webcontinental Logo" class="logo">

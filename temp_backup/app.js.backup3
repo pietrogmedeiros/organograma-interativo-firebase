@@ -1,17 +1,3 @@
-// Configuração do Firebase (desabilitada temporariamente)
-// const firebaseConfig = {
-//     apiKey: "AIzaSyBxGJwTzXzXzXzXzXzXzXzXzXzXzXzXzX",
-//     authDomain: "organograma-webcontinental.firebaseapp.com",
-//     projectId: "organograma-webcontinental",
-//     storageBucket: "organograma-webcontinental.appspot.com",
-//     messagingSenderId: "123456789",
-//     appId: "1:123456789:web:abcdef123456"
-// };
-
-// Inicializar Firebase (desabilitado temporariamente)
-// firebase.initializeApp(firebaseConfig);
-// const db = firebase.firestore();
-
 // Variáveis globais
 let colaboradoresData = [];
 let currentHierarchyLevel = 'presidencia';
@@ -30,29 +16,7 @@ function ensureGoogleChartsLoaded() {
     });
 }
 
-// Inicializar sidebar
-function initializeSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    if (!sidebar) return;
 
-    const menuItems = sidebar.querySelectorAll('li');
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const view = item.getAttribute('data-view');
-            console.log('🎯 Menu clicado:', view);
-            
-            if (view === 'presidencia') {
-                // Resetar navegação hierárquica
-                currentHierarchyLevel = 'presidencia';
-                currentSelectedPerson = null;
-                navigationHistory = [];
-                renderPresidenciaView();
-            } else if (view === 'departamentos') {
-                renderAllDepartmentsView();
-            }
-        });
-    });
-}
 
 // Carregar dados iniciais
 async function loadInitialData() {
@@ -68,8 +32,7 @@ async function loadInitialData() {
         colaboradoresData = await response.json();
         console.log(`✅ ${colaboradoresData.length} colaboradores carregados`);
         
-        // Popular seletor de departamentos
-        populateDepartmentSelector();
+
         
         // Renderizar view inicial
         renderPresidenciaView();
@@ -80,127 +43,9 @@ async function loadInitialData() {
     }
 }
 
-// Popular seletor de departamentos
-function populateDepartmentSelector() {
-    const selector = document.getElementById('department-selector');
-    if (!selector) return;
-    
-    const departamentos = [...new Set(colaboradoresData.map(col => col.Departamento))].filter(Boolean).sort();
-    
-    selector.innerHTML = '<option value="">Todos os Departamentos</option>';
-    departamentos.forEach(dept => {
-        const option = document.createElement('option');
-        option.value = dept;
-        option.textContent = dept;
-        selector.appendChild(option);
-    });
-}
 
-// Renderizar view de todos os departamentos
-function renderAllDepartmentsView() {
-    const container = document.getElementById('chart-container');
-    if (!container) return;
-    
-    container.innerHTML = '';
-    
-    const title = document.createElement('h2');
-    title.textContent = 'Todos os Departamentos';
-    title.style.cssText = `
-        text-align: center;
-        margin: 0 0 30px 0;
-        font-size: 28px;
-        font-weight: 700;
-        color: #1e40af;
-    `;
-    container.appendChild(title);
-    
-    const departamentos = [...new Set(colaboradoresData.map(col => col.Departamento))].filter(Boolean).sort();
-    
-    const grid = document.createElement('div');
-    grid.style.cssText = `
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 20px 0;
-    `;
-    
-    departamentos.forEach(dept => {
-        const deptCard = document.createElement('div');
-        deptCard.style.cssText = `
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        `;
-        
-        const deptTitle = document.createElement('h3');
-        deptTitle.textContent = dept;
-        deptTitle.style.cssText = `
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0 0 10px 0;
-            color: #1f2937;
-        `;
-        
-        const deptCount = document.createElement('p');
-        const count = colaboradoresData.filter(col => col.Departamento === dept).length;
-        deptCount.textContent = `${count} colaboradores`;
-        deptCount.style.cssText = `
-            font-size: 14px;
-            color: #6b7280;
-            margin: 0;
-        `;
-        
-        deptCard.appendChild(deptTitle);
-        deptCard.appendChild(deptCount);
-        
-        deptCard.addEventListener('mouseenter', () => {
-            deptCard.style.transform = 'translateY(-2px)';
-            deptCard.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-        });
-        
-        deptCard.addEventListener('mouseleave', () => {
-            deptCard.style.transform = 'translateY(0)';
-            deptCard.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-        });
-        
-        deptCard.addEventListener('click', () => {
-            renderSingleDepartmentView(dept);
-        });
-        
-        grid.appendChild(deptCard);
-    });
-    
-    container.appendChild(grid);
-}
 
-// Renderizar view de departamento específico
-function renderSingleDepartmentView(departmentName) {
-    const container = document.getElementById('chart-container');
-    if (!container) return;
-    
-    const colaboradores = colaboradoresData.filter(col => col.Departamento === departmentName);
-    
-    container.innerHTML = '';
-    
-    const title = document.createElement('h2');
-    title.textContent = `Departamento: ${departmentName}`;
-    title.style.cssText = `
-        text-align: center;
-        margin: 0 0 30px 0;
-        font-size: 28px;
-        font-weight: 700;
-        color: #1e40af;
-    `;
-    container.appendChild(title);
-    
-    // Criar visualização hierárquica
-    createHierarchicalView(container, colaboradores, departmentName);
-}
+
 
 // Renderizar view da presidência
 function renderPresidenciaView() {
@@ -212,15 +57,21 @@ function renderPresidenciaView() {
     container.innerHTML = '';
     
     const title = document.createElement('h2');
-    title.textContent = 'Presidência - Diretores';
+    title.textContent = 'Presidência';
     title.style.cssText = `
         text-align: center;
-        margin: 0 0 30px 0;
-        font-size: 28px;
+        margin: 0 0 40px 0;
+        font-size: 32px;
         font-weight: 700;
         color: #1e40af;
     `;
     container.appendChild(title);
+    
+    // Buscar presidente
+    const presidente = colaboradoresData.find(col => {
+        const cargo = (col.Cargo || '').toLowerCase();
+        return cargo.includes('presidente');
+    });
     
     // Buscar diretores
     const diretores = colaboradoresData.filter(col => {
@@ -229,6 +80,89 @@ function renderPresidenciaView() {
     });
     
     console.log(`👔 Diretores encontrados: ${diretores.length}`, diretores);
+    
+    // Card da Presidente (se encontrada)
+    if (presidente) {
+                        const presidenteContainer = document.createElement('div');
+                presidenteContainer.style.cssText = `
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                `;
+        
+                            const presidenteCard = document.createElement('div');
+                    presidenteCard.style.cssText = `
+                        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+                        color: white;
+                        border-radius: 20px;
+                        padding: 20px;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 8px 30px rgba(96, 165, 250, 0.4);
+                        max-width: 300px;
+                        width: 100%;
+                    `;
+        
+        const presidenteNome = document.createElement('h3');
+        presidenteNome.textContent = presidente.Colaborador;
+        presidenteNome.style.cssText = `
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        `;
+        
+        const presidenteCargo = document.createElement('p');
+        presidenteCargo.textContent = presidente.Cargo;
+        presidenteCargo.style.cssText = `
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 0 6px 0;
+            opacity: 0.95;
+        `;
+        
+        const presidenteDept = document.createElement('p');
+        presidenteDept.textContent = presidente.Departamento;
+        presidenteDept.style.cssText = `
+            font-size: 12px;
+            opacity: 0.9;
+            margin: 0;
+        `;
+        
+        presidenteCard.appendChild(presidenteNome);
+        presidenteCard.appendChild(presidenteCargo);
+        presidenteCard.appendChild(presidenteDept);
+        
+        // Adicionar eventos de hover e clique
+        presidenteCard.addEventListener('mouseenter', () => {
+            presidenteCard.style.transform = 'translateY(-5px)';
+            presidenteCard.style.boxShadow = '0 12px 35px rgba(96, 165, 250, 0.5)';
+        });
+        
+        presidenteCard.addEventListener('mouseleave', () => {
+            presidenteCard.style.transform = 'translateY(0)';
+            presidenteCard.style.boxShadow = '0 8px 30px rgba(96, 165, 250, 0.4)';
+        });
+        
+        presidenteCard.addEventListener('click', () => {
+            navigateToNextLevel(presidente, 'presidente');
+        });
+        
+        presidenteContainer.appendChild(presidenteCard);
+        container.appendChild(presidenteContainer);
+    }
+    
+    // Título dos diretores
+    const diretoresTitle = document.createElement('h3');
+    diretoresTitle.textContent = 'Diretores';
+    diretoresTitle.style.cssText = `
+        text-align: center;
+        margin: 0 0 20px 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: #374151;
+    `;
+    container.appendChild(diretoresTitle);
     
     if (diretores.length === 0) {
         const noData = document.createElement('p');
@@ -243,13 +177,16 @@ function renderPresidenciaView() {
         return;
     }
     
-    // Container dos diretores
+    // Container dos diretores em layout horizontal
     const diretoresContainer = document.createElement('div');
     diretoresContainer.style.cssText = `
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px 0;
+        max-width: 100%;
+        margin: 0 auto;
+        justify-content: center;
     `;
     
     diretores.forEach(diretor => {
@@ -257,37 +194,48 @@ function renderPresidenciaView() {
         diretorCard.style.cssText = `
             background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
             color: white;
-            border-radius: 15px;
-            padding: 25px;
+            border-radius: 12px;
+            padding: 15px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 120px;
+            flex: 1;
+            min-width: 180px;
+            max-width: 200px;
         `;
         
         const diretorNome = document.createElement('h3');
         diretorNome.textContent = diretor.Colaborador;
         diretorNome.style.cssText = `
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 700;
-            margin: 0 0 10px 0;
+            margin: 0 0 6px 0;
+            line-height: 1.2;
         `;
         
         const diretorCargo = document.createElement('p');
         diretorCargo.textContent = diretor.Cargo;
         diretorCargo.style.cssText = `
-            font-size: 14px;
+            font-size: 11px;
             font-weight: 600;
-            margin: 0 0 8px 0;
+            margin: 0 0 4px 0;
             opacity: 0.9;
+            line-height: 1.3;
         `;
         
         const diretorDept = document.createElement('p');
         diretorDept.textContent = diretor.Departamento;
         diretorDept.style.cssText = `
-            font-size: 12px;
+            font-size: 9px;
             opacity: 0.8;
             margin: 0;
+            line-height: 1.2;
         `;
         
         diretorCard.appendChild(diretorNome);
@@ -623,10 +571,36 @@ function renderGrupoSubordinados(container, subordinados, tipo, gestor) {
     container.appendChild(titulo);
     
     const subordinadosContainer = document.createElement('div');
+    
     // Aplicar classe CSS específica baseada no tipo
     if (tipo === "coordenador") {
         subordinadosContainer.className = "coordenadores-section";
         subordinadosContainer.setAttribute("data-count", subordinados.length.toString());
+    } else if (tipo === "gerente") {
+        subordinadosContainer.className = "gerentes-section";
+        subordinadosContainer.setAttribute("data-count", subordinados.length.toString());
+    } else if (tipo === 'colaborador') {
+        // Configuração especial para colaboradores (grid mais compacto e sempre centralizado)
+        subordinadosContainer.style.cssText = `
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px 0;
+            justify-items: center;
+            justify-content: center;
+            max-width: 100%;
+        `;
+    } else if (tipo === 'supervisor') {
+        // Configuração especial para supervisores (melhor centralização)
+        subordinadosContainer.style.cssText = `
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+            justify-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        `;
     } else {
         subordinadosContainer.style.cssText = `
             display: grid;
@@ -634,114 +608,7 @@ function renderGrupoSubordinados(container, subordinados, tipo, gestor) {
             gap: 20px;
             padding: 20px 0;
         `;
-    }    
-    subordinados.forEach(subordinado => {
-        const card = createColaboradorCard(subordinado, tipo);
-        
-        // Adicionar eventos de hover e clique
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-2px)';
-            card.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-            card.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
-        });
-        
-        card.addEventListener('click', () => {
-            const proximoNivel = detectNextLevel(subordinado);
-            navigateToNextLevel(subordinado, proximoNivel);
-        });
-        
-        subordinadosContainer.appendChild(card);
-    });
-    
-    container.appendChild(subordinadosContainer);
-}
-
-// Adicionar breadcrumb
-function addBreadcrumb(container) {
-    const breadcrumb = document.createElement('div');
-    breadcrumb.style.cssText = `
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-        padding: 15px;
-        background: #f8fafc;
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
-    `;
-    
-    const backButton = document.createElement('button');
-    backButton.textContent = '← Voltar';
-    backButton.style.cssText = `
-        background: #3b82f6;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: background 0.2s;
-    `;
-    
-    backButton.addEventListener('mouseenter', () => {
-        backButton.style.background = '#2563eb';
-    });
-    
-    backButton.addEventListener('mouseleave', () => {
-        backButton.style.background = '#3b82f6';
-    });
-    
-    backButton.addEventListener('click', goBack);
-    
-    const path = document.createElement('span');
-    path.textContent = `Presidência > ${currentSelectedPerson ? currentSelectedPerson.Colaborador : ''}`;
-    path.style.cssText = `
-        color: #64748b;
-        font-size: 14px;
-    `;
-    
-    breadcrumb.appendChild(backButton);
-    breadcrumb.appendChild(path);
-    container.appendChild(breadcrumb);
-}
-
-// Voltar para nível anterior
-function goBack() {
-    if (navigationHistory.length === 0) {
-        // Se não há histórico, voltar para presidência
-        currentHierarchyLevel = 'presidencia';
-        currentSelectedPerson = null;
-        navigationHistory = [];
-        renderPresidenciaView();
-        return;
-    }
-    
-    const previousState = navigationHistory.pop();
-    currentHierarchyLevel = previousState.level;
-    currentSelectedPerson = previousState.person;
-    
-    if (currentHierarchyLevel === 'presidencia') {
-        renderPresidenciaView();
-    } else {
-        const previousLevel = getPreviousLevel(currentHierarchyLevel);
-        renderHierarchyLevel(currentSelectedPerson, previousLevel);
-    }
-}
-
-// Determinar nível anterior
-function getPreviousLevel(currentLevel) {
-    const levelMap = {
-        'diretor': 'presidencia',
-        'gerente': 'auto',
-        'coordenador': 'auto',
-        'supervisor': 'auto',
-        'colaborador': 'auto'
-    };
-    return levelMap[currentLevel] || 'presidencia';
+    }    return levelMap[currentLevel] || 'presidencia';
 }
 
 // Criar card de colaborador
@@ -897,8 +764,8 @@ function createColaboradorCard(colaborador, tipo) {
             
         case 'colaborador':
             cardStyles = `
-                min-width: 160px;
-                max-width: 200px;
+                min-width: 180px;
+                max-width: 220px;
                 padding: 12px;
                 background: linear-gradient(135deg, #f9fafb, #f3f4f6);
                 border: 2px solid #d1d5db;
@@ -907,34 +774,39 @@ function createColaboradorCard(colaborador, tipo) {
                 text-align: center;
                 transition: all 0.3s ease;
                 cursor: pointer;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 120px;
             `;
             nomeStyles = `
                 font-weight: 600;
-                font-size: 12px;
+                font-size: 11px;
                 color: #374151;
-                margin-bottom: 4px;
+                margin-bottom: 3px;
                 line-height: 1.2;
                 word-wrap: break-word;
                 overflow-wrap: break-word;
             `;
             cargoStyles = `
-                font-size: 10px;
+                font-size: 9px;
                 color: #6b7280;
                 font-weight: 500;
                 line-height: 1.3;
-                margin-bottom: 3px;
+                margin-bottom: 2px;
                 word-wrap: break-word;
                 overflow-wrap: break-word;
             `;
             deptStyles = `
-                font-size: 8px;
+                font-size: 7px;
                 color: #9ca3af;
                 font-weight: 500;
                 line-height: 1.2;
-                padding: 1px 4px;
+                padding: 1px 3px;
                 background: rgba(156, 163, 175, 0.1);
-                border-radius: 3px;
-                margin-top: 3px;
+                border-radius: 2px;
+                margin-top: 2px;
                 word-wrap: break-word;
                 overflow-wrap: break-word;
             `;
@@ -1053,11 +925,7 @@ function createHierarchicalView(container, colaboradores, deptName) {
     container.appendChild(cardsContainer);
 }
 
-// Funções auxiliares
-function setActiveButton(activeButton) {
-    document.querySelectorAll('.sidebar li').forEach(item => item.classList.remove('active'));
-    activeButton.classList.add('active');
-}
+
 
 function setLoadingState(message) {
     const container = document.getElementById('chart-container');
@@ -1080,15 +948,51 @@ function setReadyState(message) {
     }
 }
 
+// Função para fazer logout
+function handleLogout() {
+    console.log('🚪 Fazendo logout...');
+    
+    // Limpar dados da sessão (se houver)
+    sessionStorage.clear();
+    localStorage.removeItem('user');
+    
+    // Mostrar mensagem de confirmação
+    if (confirm('Tem certeza que deseja sair?')) {
+        // Redirecionar para a página de login
+        window.location.href = 'login.html';
+    }
+}
+
+// Função para verificar se o usuário está logado
+function checkAuthStatus() {
+    // Verificar se há dados de usuário no localStorage
+    const user = localStorage.getItem('user');
+    if (!user) {
+        console.log('🔒 Usuário não autenticado, redirecionando para login...');
+        window.location.href = 'login.html';
+        return false;
+    }
+    return true;
+}
+
 // Inicializar aplicação
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('🚀 Inicializando aplicação...');
     
+    // Verificar se o usuário está autenticado
+    if (!checkAuthStatus()) {
+        return; // Para a execução se não estiver autenticado
+    }
+    
     // Garantir que o Google Charts está carregado
     await ensureGoogleChartsLoaded();
     
-    // Inicializar sidebar
-    initializeSidebar();
+    // Configurar botão de logout
+    const logoutButton = document.getElementById('btn-logout');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', handleLogout);
+        console.log('🔗 Botão de logout configurado');
+    }
     
     // Carregar dados
     await loadInitialData();

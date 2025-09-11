@@ -4,15 +4,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx http-server -p 3000 -o",
-    "dev": "npx http-server -p 3000 -o -c-1",
-    "create-user": "node create-user.js"
+  "start": "npx http-server -p 3010 -o",
+  "dev": "npx http-server -p 3010 -o -c-1",
+  "create-user": "node create-user.js",
+  "migrate-csv": "node migrate-csv-to-firestore.js",
+  "remove-departamento": "node remove-departamento-field.js",
+  "update-area": "node update-area-from-csv.js",
+  "check-area": "node check-area.js",
+  "add-collaborator": "node add-collaborator.js",
+  "delete-collaborators": "node delete-collaborators.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "firebase-admin": "^13.4.0"
+  "firebase-admin": "^13.4.0",
+  "csv-parse": "^5.5.6"
   }
 }

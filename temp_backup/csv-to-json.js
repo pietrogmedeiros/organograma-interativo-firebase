@@ -23,7 +23,7 @@ function csvToJson(csvFilePath, outputPath) {
                 // Mapeia os headers para as propriedades esperadas
                 obj.Colaborador = values[0] || '';
                 obj.Cargo = values[1] || '';
-                // Campo legado removido: Departamento
+                obj.Departamento = values[2] || '';
                 obj['Superior imediato'] = values[3] || '';
                 obj['Área'] = values[4] || '';
                 
@@ -44,7 +44,7 @@ function csvToJson(csvFilePath, outputPath) {
 }
 
 // Executa a conversão
-const csvFile = './colaboradores.csv'; // arquivo atualizado
-const outputFile = './colaboradores.json';
+const csvFile = './exemplo-colaboradores.csv'; // ou o nome do seu arquivo CSV
+const outputFile = './output.json';
 
 csvToJson(csvFile, outputFile);

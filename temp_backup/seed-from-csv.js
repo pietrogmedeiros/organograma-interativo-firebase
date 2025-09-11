@@ -28,7 +28,7 @@ async function seedFromCSV() {
                 const colaborador = {
                     Colaborador: values[0],
                     Cargo: values[1],
-                    // Campo legado removido: Departamento
+                    Departamento: values[2],
                     'Superior imediato': values[3],
                     'Área': values[4]
                 };

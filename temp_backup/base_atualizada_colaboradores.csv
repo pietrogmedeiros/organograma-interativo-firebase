@@ -1,0 +1,542 @@
+Nome,Cargo,Departamento,Superior Imediato,Área
+Carlos Eduardo Schuwartsman Van Ondheusden,WEB DESIGNER,DC_MKO_E-COMMERCE COMERCIAL,Martha Irigoyen Lamas,E-Commerce Produtos
+Andreia Dornelles,VENDEDORA,DC_PEÇAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Luis Paulo Spolador Souto,COORDENADOR DE SISTEMAS PL,TI_GDS_COORDENACAO DE SISTEMAS,Jairo Avritchir,Fabrica de Softwares
+Debora da Costa Oliveira,ASSISTENTE DE LOGISTICA - GERENCIAMENTO DE ENTREGAS,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Lorena de Carli,COORDENADOR ADMINISTRATIVO - INFRAESTRUTURA,RC_CTR_CREDITO_E_COBRANCA,Jefferson dos Santos Melo,Crédito e Cobrança
+Marcelo Samuel Ribas Machado,ANALISTA DE INFRAESTRUTURA JR,T.I.,Guilherme Bauce Machado,Sustentação e Operações de TI
+Silvana Fonseca da Fonseca,COORDENADOR DE DATA ANALYSTICS JR,TI_GGT_COORDENACAO DATA ANALYTICS,Jairo Avritchir,Data Analytics
+Mauricio Barbosa Barros,ANALISTA  BI PLENO,TI_GGT_COORDENACAO DATA ANALYTICS,Silvana Fonseca da Fonseca,Data Analytics
+Roberto Toshio Katsurayama,ANALISTA DE NEGOCIOS E SISTEMAS PL - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Luis Paulo Spolador Souto,Fabrica de Softwares
+Alejandro Michelin Salomon Garavelli,DESENVOLVEDOR FULL STACK SR - BACK OFFICE,TI_GDS_COORDENACAO DE SISTEMAS  DE BACK OFFICE,Diego Nogueira dos Santos,Fabrica de Softwares
+Luiz Alberto Neves dos Santos,DESENVOLVEDOR FULL STACK SR - BACK OFFICE,TI_GDS_COORDENACAO DE SISTEMAS  DE BACK OFFICE,Diego Nogueira dos Santos,Fabrica de Softwares
+Ubaldo Benhur de Souza Rocha,ANALISTA DE NEGOCIOS E SISTEMAS JR - BACK OFFICE,TI_GDS_COORDENACAO DE SISTEMAS  DE BACK OFFICE,Luis Paulo Spolador Souto,Fabrica de Softwares
+Luciano Lemberck de Souza,ANALISTA DE NEGOCIOS JR,TI_GDS_COORDENACAO DE SISTEMAS  DE BACK OFFICE,Luis Paulo Spolador Souto,Fabrica de Softwares
+Guilherme Moraes da Silva,DESENVOLVEDOR ASSISTENTE - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Bruno Correa,DESENVOLVEDOR FULL STACK SR,TI_GDS_COORDENACA0 DE INTEGRACOES,Diego Nogueira dos Santos,Fabrica de Softwares
+Joao Pedro Antoniazi Tonello,ANALISTA DE NEGOCIOS E SISTEMAS JR,TI_GERENCIA DE ARQUITETURA E PROCESSOS,Diego Nogueira dos Santos,Arquitetura e Processos
+Johncleo Scheffer Medina,DESENVOLVEDOR FULL STACK JR,TI_GGT_COORDENACAO DATA ANALYTICS,Silvana Fonseca da Fonseca,Data Analytics
+Daniel de Menezes,DESENVOLVEDOR FRONT-END JUNIOR,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Rafael Dias Shouman Borba,DESENVOLVEDOR FRONT-END PLENO,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Kamylla Schardosim da Silva,DESENVOLVEDOR FULL STACK PL - INTEGRACOES,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Eduardo Augusto Siqueira Isaias,ASSISTENTE DE TI - DATA ANALYTICS,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Andre Gerber Krumm,ANALISTA DE NEGÓCIOS E SISTEMAS PL - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Luis Paulo Spolador Souto,Fabrica de Softwares
+Alexandre Ricardo Waechter,DESENVOLVEDOR ASSISTENTE - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Diego Erick Monteiro de Souza,DESENVOLVEDOR FULLSTACK SR - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Rosane Almeida dos Santos,VENDEDORA,DC_PECAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Gabriel de Paula Santos,SUPERVISOR DE LOGISTICA,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+David Vargas de Almeida,ANALISTA DE LOGISTICA SR - TRANSPORTES,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Henrique Pereira Marques,Analista de Informações Gerenciais,Diretoria Comercial,Diego Calabria,Informações gerenciais
+Eduarda Butzke Feijo,ANALISTA DE DEVOLUCAO PL - 1P,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Morgana Martins Hoffmeister,SUPERVISOR DE DEVOLUCOES- 1P,DC_MKO_QUALIDADE,Arsenio da Silva Lapas Junior,Qualidade 1P
+Arsenio da Silva Lapas Junior,GERENTE DE QUALIDADE JR,DC_MKO_QUALIDADE,Lisiane Mello Martins,Qualidade 1P
+Jadine Alexia Antunes de Souza,ANALISTA FINANCEIRO JR,FINANCEIRO,Andreia Dassi de Souza,Contas a Receber
+Jessica Daiane Santos da Silva,ASSISTENTE DE SAC JR,05_GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Maria Eduarda dos Santos Pereira,ASSISTENTE DE CANCELAMENTO E DEVOLUCOES - 1P,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Marycler de Lima Rosa da Silva,ASSISTENTE DE COMPRAS JR,DC_COMPRAS,Felipe Colombo,Compras
+Felipe Augusto Fiorini Mocelin,GERENTE DE ONBOARDING E CATALOGO - MARKETPLACE,DM_MKP_CATALOGO E ONBOARDING,Ricardo Baginski Nunes,"Catálogo, Onboarding e Prospecção"
+Elifas Levi Rocha dos Santos,"DIRETOR DE AUDITORIA, RISCO E COMPLIANCE",DIRETORIA DE RISCOS E COMPLIANCE,Eloana Antoniazi Tonello,"Auditoria,Riscos e Compliance"
+Karlson Lima de Almeida Calumby,COORDENADOR DE INFRAESTRUTURA DE TI,TI_GERENCIA DE GOVERNANÇA E INFRAESTRUTURA,Demetrio Bogowicz,Infraestrutura
+Daniela Portela Salton,SUPERVISOR FINANCEIRO - CONTAS A PAGAR,RC_CTR_FINANCEIRO CONTAS A PAGAR,Jefferson dos Santos Melo,CONTAS A PAGAR
+Antonio Mendes Ferreira Junior,COORDENADOR JR DE AUDITORIA INTERNA,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Arilson Glogner Durand,ASSISTENTE FISCAL,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Leonardo da Rocha Sa,ADVOGADO TRIBUTARIA,JURIDICO TRIBUTARIA,Guilherme Ricciardi Correa Lopes,Jurídico Tributário
+Emily Machado dos Santos,AUXILIAR FISCAL,108_GC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Gabriel Prauchner Glitzenhirn,ANALISTA FISCAL JR,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Adrian Vinicius Goncalves Schardosim Pinto,ASSISTENTE DE FISCAL,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Diego Calabria,DIRETOR NEGOCIOS,DIRETORIA COMERCIAL,Eloana Antoniazi Tonello,Negócios 1P e E Commerce
+Guilherme da Silva Lemos,COMPRADOR SR,DC_COMPRAS,Felipe Colombo,Compras
+Ariane Cezar Pires,ANALISTA COMERCIAL,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Brenda da Silva,ANALISTA FINANCEIRA,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Bruna Maus de Vargas,ANALISTA COMERCIAL SR - 1P,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Bruno Matos Silva,ANALISTA COMERCIAL PL - CANAIS,DM_MKP_COMERCIAL CANAIS,Mauricio Alves Albanus,Comercial Canais - 3P
+Lisiane Mello Martins,GERENTE DE MARKETPLACE SR,DC_GERENCIA DE MARKETPLACE OUT,Diego Calabria,Comercial MKP Out
+Paulo Roberto Nicolay,GERENTE DE NOVOS NEGOCIOS,DC_MKO_NOVOS NEGOCIOS,Lisiane Mello Martins,Novos Canais e Negócios 1P
+Luana Jardim Pedroso,ANALISTA COMERCIAL PL,DM_MKP_COMERCIAL CANAIS,Mauricio Alves Albanus,Comercial Canais - 3P
+Bibiana Santos Coelho,ANALISTA DE CATALOGO JR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Mauricio Alves Albanus,SUPERVISOR COMERCIAL,DM_MKP_COMERCIAL CANAIS,Fernanda Viegas Altreiter,Comercial Canais - 3P
+Ricardo Baginski Nunes,GERENTE GERAL DE MARKETPLACE,DM_MKP_PROSPECCAO,Juliano Teles Andriguetti,Hub MKP - 3P
+Juliane Cristina Kraemer,COORDENADOR COMERCIAL - E-COMMERCE,DC_MKO_E-COMMERCE,João Aparecido de Freitas,E-Commerce Comercial
+Gabriela Wolff Goncalves,ANALISTA DE CATALOGO SR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Fernanda Viegas Altreiter,GERENTE COMERCIAL CANAIS OUT,DM_MKP_COMERCIAL CANAIS,Ricardo Baginski Nunes,Comercial 3P
+Juliano Teles Andriguetti,DIRETOR E-COMMERCE MARKETPLACE,DIRETORIA DE MARKETPLACE,Eloana Antoniazi Tonello,Negócios 3P
+Christian Reginato Alibio,ANALISTA DE PROSPECCAO PLENO,DM_MKP_COMERCIAL PARCERIAS,Rosangela Azevedo de Oliveira,Prospecção Sellers
+Nicolle Daumer de Freitas,ANALISTA DE CATALOGO PLENO,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Adriano Figueiredo Gottschalk,SUPERVISOR  COMERCIAL - NOVOS NEGOCIOS,DC_MKO_NOVOS NEGOCIOS,Paulo Roberto Nicolay,Novos Negócios - 1P
+Alisson Almeida dos Santos,ESPECIALISTA FINANCEIRO - CONTAS A RECEBER,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Joice Cristina Zanella Silveira,ANALISTA DE ONBOARDING SR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Dani Lucas do Nascimento Pereira,SUPERVISOR (A)  DE QUALIDADE JR- 3P,DM_MKP_QUALIDADE,Jarbas Pedroso Prates,Qualidade 3P
+Andreia Dassi de Souza,COORDENADORA FINANCEIRO - CONTAS A RECEBER,RC_CTR_FINANCEIRO CONTAS A RECEBER,Jefferson dos Santos Melo,CONTAS A RECEBER
+Denis Scheer,VENDEDOR,DC_PEÇAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Raphael Willian dos Santos,VENDEDOR,DC_PEÇAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Antonio Cesar Goncalves dos Santos,VENDEDOR,DC_PEÇAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Suelem Rodrigues de Souza,ASSISTENTE DE LOGISTICA - CICLO DO PEDIDO,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Phillipe Ostermann Surdo,ANALISTA DE UX,DC_MKO_E-COMMERCE COMERCIAL,Martha Irigoyen Lamas,E-Commerce Produtos
+Joao Antonio Castro da Silva,ANALISTA COMERCIAL CATEGORIA,DC_MKO_E-COMMERCE,Martha Irigoyen Lamas,E-Commerce Produtos
+Vinicius Goncalves Quessada Velasques,ANALISTA COMERCIAL SR,DC_MKO_E-COMMERCE,Juliane Cristina Kraemer,E-Commerce Comercial
+Patricia Silva,GERENTE DE SAC,GS_MKO_SAC 1P,Lisiane Mello Martins,SAC - 1P
+Klaiton Iuri dos Santos Bauermann,ANALISTA DE QUALIDADE,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Layon dos Santos,LIDER OPERACIONAL PL,DC_GLO_CD VIANA 04,Andriel Klein Gomes,CD Viana
+Joao Gomes Filho,COORDENADOR SR (A) CENTRO DE DISTRIBUICAO,DC_GLO_CD CARIACICA 05,Diego Frantiesco Baier,CD Cariacica
+Julia Schmitz,ASSISTENTE ADMINISTRATIVO,DC_GLO_CD NAVEGANTES 09,Eula Bastos da Silva,CD Navegantes
+Andriel Klein Gomes,COORDENADOR SR (A) CENTRO DE DISTRIBUICAO,DC_GLO_CD VIANA 04,Diego Frantiesco Baier,CD Viana
+Marlon Matos Santana,ANALISTA ADMINISTRATIVO PL,LOGISTICA,Mauricio Marquezotti da Silva,Logistica Transportes
+Sergio Dos Reis Lima,LÍDER OPERACIONAL PL,DC_GLO_CD CARIACICA 05,Joao Gomes Filho,CD Cariacica
+Carlos Izaias da Silva,ANALISTA ADMINISTRATIVO,DC_GLO_CD VIANA 04,Andriel Klein Gomes,CD Viana
+Erick da Silva Teixeira,LIDER OPERACIONAL PL,DC_GLO_CD VIANA 04,Andriel Klein Gomes,CD Viana
+Michele Araujo do Carmo,ASSISTENTE ADMINISTRATIVO,DC_GLO_CD VIANA 04,Andriel Klein Gomes,CD Viana
+Flavio Roberto Nascimento,ANALISTA DE LOGISTICA PL,DC_GLO_CD CARIACICA 05,Joao Gomes Filho,CD Cariacica
+Roebster Trevisan Ferreira,COORDENADOR DE LOGISTICA REVERSA - CDS ES,DC_GLO_CD VIANA 04,Diego Frantiesco Baier,CD Viana
+Kelly Gimenez,ANALISTA DE GARANTIA PL,DC_IMPORTACAO,Leonardo Gomes Rodrigues,Importação - garantias
+Daniel Bonassi,ASSISTENTE DE ATENDIMENTO PL,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Leonardo Gross,ASSISTENTE DE QUALIDADE - 1P,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Silmara Lucas de Oliveira,SUPERVISOR DE LOGISTICA - CD,DC_GLO_CD NAVEGANTES 09,Eula Bastos da Silva,CD Navegantes
+Caroline Azzulin,COORDENADOR DE ATENDIMENTO - 3P,GS_MKP_SAC 3P,Jarbas Pedroso Prates,SAC- 3P
+Dhones Pereira de Oliveira,ANALISTA ADMINISTRATIVO JR,DC_GLO_CD CARIACICA 05,Joao Gomes Filho,CD Cariacica
+Felipe Colombo,GERENTE COMPRAS E IMPORTACAO,DIRETORIA COMERCIAL,Diego Calabria,Compras e Importação
+Thais Honatel Lopes,ANALISTA DE QUALIDADE JR,MARKETPLACE,Jarbas Pedroso Prates,Qualidade 3P
+Erick de Sena Weeck,ASSISTENTE DE ATENDIMENTO PLENO,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Magnus Puchulu,ANALISTA DE LOGISTICA - GERENCIAMENTO DE ENTREGAS,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Renata da Costa Rosa,ASSISTENTE DE CADASTRO-1P,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Ricardo Schell,CONFERENTE,DC_GLO_CD PORTO ALEGRE 01,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Sophia Uzun Jacob,COMPRADOR JR,DC_COMPRAS,Felipe Colombo,Compras
+Leonardo Rabaioli,Advogado,Juridico Tributário,Guilherme Ricciardi Correa Lopes,Jurídico Tributário
+Tauane Rodrigues Soares,ANALISTA DE ATENDIMENTO JR,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Geovana Ballejo Santana,ASSISTENTE FISCAL JR,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Matheus Lopes Nunes,COMPRADOR SR,DC_COMPRAS,Felipe Colombo,Compras
+Keroline Moreira Correa,ANALISTA DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Gian Silva Ilha,SUPERVISOR COMERCIAL,DM_MKP_COMERCIAL SELLERS,Fernanda Viegas Altreiter,Comercial Sellers - 3P
+Carina da Silva,ANALISTA FINANCEIRO PL,GC_CTR_FINANCEIRO_CONTAS_A_RECEBER,Andreia Dassi de Souza,Contas a Receber
+Andressa Dreissig Velar,ASSISTENTE DE SAC JR -1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Greyce Silva dos Santos,ANALISTA DE ATENDIMENTO JR,DM_MKP_COMERCIAL_SELLER,Caroline Azzulin,SAC- 3P
+Paulo Sergio dos Santos Menezes Junior,SUPERVISOR DE LOGISTICA,DC_GLO_CD VIANA 04,Andriel Klein Gomes,CD Viana
+Rodrigo Jose da Silva,ANALISTA FISCAL PL,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Debora Taise Antoniazi,SUPERVISOR DE VENDAS,GC_B2B,Philippe Alves Stephanou,B2B
+Brenda Borges Renner,ANALISTA DE  COMPRAS JR,DC_COMPRAS,Felipe Colombo,Compras
+Fabio Santos Ricardo,ANALISTA COMERCIAL PLENO,DC_INDUSTRIA CAMARAS FRIAS,Mari Marcela Helfenstein,Industria Camara Fria
+Juliana Haubert Lopes,COORDENADOR (A) FISCAL,RC_CTR_FISCAL,Jefferson dos Santos Melo,FISCAL
+Juliana Maurmann,ANALISTA DE VENDAS - FRANQUIAS,GC_B2B,Philippe Alves Stephanou,B2B
+Julia Lopes Gregorio,ANALISTA DE  COMPRAS JR,DC_COMPRAS,Felipe Colombo,Compras
+Leonardo Gomes Rodrigues,SUPERVISOR DE GARANTIA JR,DC_IMPORTACAO,Felipe Pereira de Souza,Importação - garantias
+Marcos da Silva Rosa,ANALISTA COMERCIAL SR - 1P,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Vanessa Helem Almeida Trevisan Ferreira,COORDENADORA LOGISTICA REVERSA,DC_GLO_CD VIANA 04,Diego Frantiesco Baier,CD Viana
+Deice Couto Cossio,ANALISTA DE CREDITO,Crédito,Marta Clari Antoniazi,Crédito e Cobrança
+Mauricio Goncalves Camilo,ANALISTA DE ATENDIMENTO JR - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Eslen Adriana Correa Dias,ANALISTA DE ATENDIMENTO JR,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Eula Bastos da Silva,COORDENADOR SR (A) CENTRO DE DISTRIBUICAO,DC_GLO_CD NAVEGANTES 09,Diego Frantiesco Baier,CD Navegantes
+Patrick Talay Campos,CONFERENTE,DC_GLO_CD CARIACICA 05,Joao Gomes Filho,CD Cariacica
+Matheus Prado da Silva,ANALISTA DE  COMPRAS JR,DC_COMPRAS,Felipe Colombo,Compras
+Gilsa Dos Santos Leite,VENDEDORA,DC_PEÇAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Leonardo Luiz Daros,ANALISTA  FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Giovanni Quezada Mello,ANALISTA COMERCIAL PL - 1P,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Nizilda Garcia Quirino,VENDEDORA GALLANT,Galant Peças,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Gabriely Silva Reis,ANALISTA DE QUALIDADE JR - 3P,DM_MKP_QUALIDADE,Dani Lucas do Nascimento Pereira,Qualidade 3P - Sellers
+Raissa Mendes Martins,ASSISTENTE DE SAC - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Nathalia Ramos Laner,ANALISTA FINANCEIRO JR,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Tatiane de Carvalho Cardoso,ANALISTA DE ATENDIMENTOS ESPECIAIS PL,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Kamila Reis Camargo,ANALISTA DE QUALIDADE PL,DM_MKP_QUALIDADE,Dani Lucas do Nascimento Pereira,Qualidade 3P - Sellers
+Jeniffer Cardozo dos Santos,ANALISTA COMERCIAL JR CANAIS,DM_MKP_COMERCIAL CANAIS,Mauricio Alves Albanus,Comercial Canais - 3P
+Karine da Rosa Bilhalva,ANALISTA DE GARANTIAS JR,DC_IMPORTACAO,Leonardo Gomes Rodrigues,Importação - garantias
+Vitor Mengue Dorneles,APRENDIZ,MARKETING,Rodrigo de Quadros Vicencio,Marketing
+Diego Frantiesco Baier,COORDENADOR DE LOGISTICA GERAL,DC_GLO_LOGISTICA - ADMINISTRACAO,Diego Calabria,Logística
+Mari Marcela Helfenstein,GERENTE COMERCIAL - GALLANT,DC_INDUSTRIA CAMARAS FRIAS,Eloana Antoniazi Tonello,Industria
+Ana Laura Silva Jobim,ASSISTENTE DE CONTAS A PAGAR SR,RC_CTR_FINANCEIRO CONTAS A PAGAR,Daniela Portela Salton,Contas a Pagar
+Marta Clari Antoniazi,ENCARREGADO CREDITO E COBRANÇA,CREDITO E COBRANCA,Eloana Antoniazi Tonello,Crédito e Cobrança
+Jorge William Machado Prates,ANALISTA DE ATENDIMENTOS ESPECIAIS PL,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Jhulia Daniele Cunha Pereira,ASSISTENTE DE LOGISTICA - RMA,DC_GLO_LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica Administração
+Jarbas Pedroso Prates,GERENTE DE QUALIDADE E ATENDIMENTO,GS_MKP_SAC 3P,Ricardo Baginski Nunes,SAC e Qualidade - 3P
+Elisabete Silva Villega,ASSISTENTE DE LOGÍSTICA - RMA,DC_GLO_LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica Administração
+Dionata de Moura Molinari,ANALISTA FINANCEIRO JR,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Talia Aparecida Braz de Mello,ASSISTENTE DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Lucas Pinto Dela Libera,ANALISTA DE CONTROLADORIA JR,RC_GERENCIA DE CONTROLADORIA,Josiane Ferrari Weizenmann,Controladoria
+Decio Antoniazi Junior,ASSISTENTE CONTAS A PAGAR,RC_CTR_FINANCEIRO CONTAS A PAGAR,Daniela Portela Salton,Contas a Pagar
+Maicon Ribeiro da Silva,CONFERENTE,DC_GLO_CD PORTO ALEGRE 01,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Alyssa dos Santos Rocha,ASSISTENTE ADMINISTRATIVO,DC_GLO_CD VIANA 04,Andriel Klein Gomes,CD Viana
+Joeser Mariano da Silva,ASSISTENTE DE LOGÍSTICA - RMA,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Martha Irigoyen Lamas,GERENTE DE E-COMMERCE,DC_MKO_GERENCIA DE E-COMMERCE,Diego Calabria,E-Commerce Produtos
+Pamela Brandao da Silva,ANALISTA DE LOGÍSTICA - GERENCIAMENTO DE ENTREGAS,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Eloana Antoniazi Tonello,PRESIDENTE,PRESIDENCIA,Eloana Antoniazi Tonello,Presidência
+Marciely da Silva Oliveira,COORDENADOR DE QUALIDADE - 1P,DC_MKO_QUALIDADE,Arsenio da Silva Lapas Junior,Qualidade 1P
+Claudete Pedroso Machado,ASSISTENTE DE LOGISTICA-RMA,DC_GLO_LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica Administração
+Lauriele Zubiaurre Pereira,ANALISTA DE COMPRAS JR,DC_COMPRAS,Felipe Colombo,Compras
+Sabrina da Silva Coronel Leite,ANATLISTA  DE QUALIDADE PLENO,DM_MKP_QUALIDADE,Juliana Maiara de Souza,Qualidade 3P - Canais
+Marcia Rodrigues Batista,ASSISTENTE DE LOGISTICA - GERENCIAMENTO DE ENTREGAS,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Eric Hepp,ASSISTENTE DE LOGISTICA,LOGISTICA,Leticia de Freitas Cardoso,Logistica Administração
+Alessandra Cristina da Silva,OPERADOR DE CAIXA,DC_PEÇAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Gabrielly Cardoso Gomes,ANALISTA DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Larissa Silva dos Santos,ANALISTA FINANCEIRO JR,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Isis Christine Cruz de Lima,ANALISTA COMERCIAL PL - 1P,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Kessi Adriene Gomes da Rosa,SUPERVISOR DE QUALIDADE - NOVOS NEGOCIOS,DC_MKO_NOVOS NEGOCIOS,Paulo Roberto Nicolay,Novos Negócios - 1P
+Juliana Maiara de Souza,COORDENADOR DE QUALIDADE - 3P,DM_MKP_QUALIDADE,Jarbas Pedroso Prates,Qualidade 3P
+Jefferson Barbosa Machado,ANALISTA DE COMERCIAL JR,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Camila Rodrigues de Carvalho,ASSITENTE DE FISCAL,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Gianlucca Oliveira Neto,ANALISTA DE QUALIDADE JR - 3P,DM_MKP_QUALIDADE,Dani Lucas do Nascimento Pereira,Qualidade 3P - Sellers
+Ketlyn Roberta Correa dos Santos,ANALISTA DE ATENDIMENTO JR - TELEFONIA,GS_SAC ATENDIMENTO DE TELEFONIA,Caroline Azzulin,Atendimento a Clientes
+Maria das Gracas Amorim de Souza,ASSISTENTE DE SAC JR- 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Wagner dos Santos Dorneles,COORDENADOR DE COMPLIANCE,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Risco e Compliance
+Francieli Hendges Ribeiro,LIDER FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Simoni da Silva Oliveira,ANALISTA DE LOGISTICA JR,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Patricia de Freitas Leao,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA_ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+,LIDER FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Beatriz Oliveira Goncalves,ANALISTA DE LOGÍSTICA - RMA,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Mario Augusto Dias Dornelles,COMPRADOR SR,DC_COMPRAS,Felipe Colombo,Compras
+Leticia de Freitas Cardoso,COORDENADOR (A) DE LOGISTICA,DC_GLO_LOGISTICA - ADMINISTRACAO,Diego Frantiesco Baier,Logistica Administração
+Renata dos Reis Teixeira,ASSISTENTE FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Andre Miguel Franzen Klafke,ASSISTENTE DE AUDITORIA INTERNA,RC_GESTAO_DE_RISCOS,Wagner dos Santos Dorneles,Risco e Compliance
+Marta Serpa Barreiro,ANALISTA DE RH PL (R&S),GC_GRH_RECURSOS HUMANOS,Raquel Conceicao Barbieri Goncalves,RH - Recrutamento e Seleção 
+Josiane Ferrari Weizenmann,COORDENADOR DE CONTROLADORIA,RC_GERENCIA DE CONTROLADORIA,Jefferson dos Santos Melo,CONTROLADORIA
+Vinicius Muller Rocha Fonseca,COORDENADOR DE VENDAS PL,DC_MKO_COMERCIAL,Lisiane Mello Martins,Comercial - 1P
+Jaci Micael Borges da Silva,ANALISTA DE LOGISTICA - GERENCIAMENTO DE ENTREGAS,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Patricia Silva dos Santos,ANALISTA COMERCIAL PL,DM_MKP_COMERCIAL CANAIS,Mauricio Alves Albanus,Comercial Canais - 3P
+Camila Gabrielle da Silva Oliveira,ASSISTENTE DE SAC - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Cristielen Coutinho da Luz,COORDENADORA DE ONBOARDING E CATALOGO,DM_MKP_CATALOGO E ONBOARDING,Felipe Augusto Fiorini Mocelin,Catálogo e Onboarding
+Tamires Espindola Nogueira,ANALISTA DE QUALIDADE JR-3P,DM_MKP_QUALIDADE,Juliana Maiara de Souza,Qualidade 3P - Canais
+Luis Clodomiro Trindade Dorneles,HEAD COMERCIAL,DC_PEÇAS,Roger Ricardo Bueno Pinto,Gallant Peças
+Sabrina Franzen Bittencourt,ANALISTA FINANCEIRO JR,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Ester Lemos Fagundes Soares,ANALISTA FINANCEIRO JR,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Roger Ricardo Bueno Pinto,DIRETOR DE GOVERNANCA  CORPORATIVA E RH,DIRETORIA DE GOVERNANCA CORPORATIVA,Eloana Antoniazi Tonello,Governança e RH e Canais Off
+Maciel Aurelio Deolindo Andre,ENCARREGADO GARANTIA/EXPEDIÇÃO,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Jefferson dos Santos Melo,DIRETOR DE FINANCAS,RC_GERENCIA DE CONTROLADORIA,Eloana Antoniazi Tonello,Finanças e Controladoria
+Mauricio Marquezotti da Silva,COORDENADOR DE LOGISTICA - TRANSPORTES,DC_GLO_LOGISTICA - TRANSPORTES,Diego Frantiesco Baier,Logistica Transportes
+Sheila Roberta Pereira da Silva,ANALISTA ADMINISTRATIVA JR,DC_INDUSTRIA CAMARAS FRIAS,Mari Marcela Helfenstein,Industria Camara Fria
+Carlos Borges de Freitas Xavier,COMPRADOR INTERNACIONAL SR,DC_IMPORTACAO,Felipe Pereira de Souza,Importação - compras
+Lisiane Catiusa Peiter Morel,ANALISTA DE VENDAS,DM_MKP_TELE-VENDAS,VAGO,Tele Vendas
+Izabel Cristina da Silva Fagundes,ANALISTA FISCAL,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Mayara Czajkowski Leal,ANALISTA DE LOGISTICA SR - TRANSPORTES,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Andressa Fabiana Garcia Olgini,ANALISTA DE LOGÍSTICA - GERENCIAMENTO DE ENTREGAS,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Karen Fernanda Pla Conceicao,ANALISTA DE  ONBOARDING JR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Guilherme Ricciardi Correa Lopes,DIRETOR JURIDICO TRIBUTARIO,JURIDICO TRIBUTARIA,Eloana Antoniazi Tonello,Jurídico Tributário
+Letisse dos Santos Motta,ANALISTA DE RH PL - DP,GC_GRH_RECURSOS HUMANOS,Raquel Conceicao Barbieri Goncalves,RH - Folha
+Rosangela Azevedo de Oliveira,COORDENADORA DE PARCERIAS E PROSPECÇÃO.,DM_MKP_COMERCIAL PARCERIAS,Felipe Augusto Fiorini Mocelin,Prospecção Sellers
+Carlos Giovane Wudarski Kobielski,ANALISTA COMERCIAL SR -1P,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Audren Willian da Silva de Azevedo,ANALISTA COMERCIAL - CÂMARAS FRIAS,DC_INDUSTRIA CAMARAS FRIAS,Mari Marcela Helfenstein,Industria Camara Fria
+Emilly Joana Silva da Silva,AUXILIAR DE LOGISTICA,DC_GLO_LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica Administração
+Gilnei Luiz de Vasconcellos Cardoso,ASSISTENTE DE AUDITORIA INTERNA,RC_AUDITORIA INTERNA E COMPLIANCE,Wagner dos Santos Dorneles,Risco e Compliance
+Andressa Fagundes Fornari Nunes,ANALISTA FINANCEIRO JR,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Henrique Von Weidebach,DESENVOLVEDOR ASSISTENTE - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Thiago Silvino Horbach,DESENVOLVEDOR FULL STACK PL - INTEGRACOES,TI_GDS_COORDENACA0 DE INTEGRACOES,Diego Nogueira dos Santos,Fabrica de Softwares
+Criscian Juciele da Silva de Oliveira,ANALISTA FINANCEIRO (A),RC_GESTAO_DE_RISCOS,Andreia Dassi de Souza,Contas a Receber
+Darlise Guimaraes Azambuja dos Santos,ESPECIALISTA CONTABIL,RC_CTR_CONTABILIDADE,Paulo Cesar Nunes dos Santos,Contabilidade
+Fabio Lyam Westerhofer Lara,ANALISTA DE NEGOCIOS E SISTEMAS JR - SISTEMAS,TI_GDS_COORDENAÇÃO DE SISTEMAS,Luis Paulo Spolador Souto,Fabrica de Softwares
+Marina Marques,SOCIAL MEDIA SR,DC_MARKETING,Rodrigo de Quadros Vicencio,Marketing
+Felipe Pereira de Souza,COORDENADOR DE IMPORTACAO,DC_IMPORTACAO,Felipe Colombo,Importação
+Rodrigo Silveira Arrue,AUXILIAR JURIDICO,DIRETORIA JURIDICO,Vinicius Antoniazi Ungarato,Jurídico Civel
+Gabriel Salvagni Basso,AUXILIAR JURIDICO,JURIDICO CIVIL,Vinicius Antoniazi Ungarato,Jurídico Civel
+Liliane Franco Paulon,Producao de Conteudo,MARKETING,Rodrigo de Quadros Vicencio,Marketing
+Vinicius Antoniazi Ungarato,Diretor Juridico Civil,Juridico,Eloana Antoniazi Tonello,Jurídico Civel
+Adriano Lucas Vieira,DESENVOLVEDOR ASSISTENTE - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Gabriella Torres da SIlva,ASSSITENTE DE GARANTIA SR,DC_IMPORTACAO,Leonardo Gomes Rodrigues,Importação - garantias
+Tauane Vitoria Schmitz de Souza,ASSISTENTE DE SAC JR -3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Ana Luiza Gimenez Renger,ESTAGIARIA,AUDITORIA,Antonio Mendes Ferreira Junior,Auditoria
+Eduardo do Nascimento Faria,DESIGNER GRAFICO PLENO,DC_MARKETING,Rodrigo de Quadros Vicencio,Marketing
+Raquel Conceicao Barbieri Goncalves,GERENTE DE RECUROS HUMANOS,GC_GERENCIA DE RECURSOS HUMANOS,Roger Ricardo Bueno Pinto,Recursos Humanos
+Petra Hannaya Anghelkof de Souza Fernandes,ASSISTENTE DE LOGISTICA- RMA,DC_GLO_LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica Administração
+Mariane Chaves Vieira,ASSISTENTE DE LOGISTICA - CICLO DO PEDIDO,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Emanuely Romanzini Oliveira,ANALISTA DE CADASTRO PL - IMPORTACAO,DC_IMPORTACAO,Felipe Pereira de Souza,Importação - Cadastro
+Gustavo Machado Leal,ASSISTENTE DE LOGÍSTICA- TRANSPORTES,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Gustavo Pisching Marchesan,DESENVOLVEDOR ASSISTENTE - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Andressa Nunes da Silva,COMPRADOR JR,DC_COMPRAS,Felipe Colombo,Compras
+Bruna Teles dos Santos,ANALISTA DE RH PL,GC_GRH_RECURSOS HUMANOS,Raquel Conceicao Barbieri Goncalves,RH - Benefícios
+Taysa Mattos Goulart,Jovem Aprendiz,MARKETPLACE,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Rodrigo Amaral Silveira,ANALISTA DE MARKETING PL,MARKETING,Rodrigo de Quadros Vicencio,Marketing
+Steve Augusto Ferreira Sobral,ASSISTENTE DE MANUTENCAO,DC_GLO_CD NAVEGANTES 09,Eula Bastos da Silva,CD Navegantes
+Camilly de Souza Franco,ANALISTA FINANCEIRO JR,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Tatiane Aguiar da Silva,ASSISTENTE DE SAC - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Raiar Bairros Ferreira Toscan,ANALISTA DE QUALIDADE JR - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Bruna Maciel Carvalho,ANALISTA DE CADASTRO  PL,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Lisiani Sanches Marcelino,ASSISTENTE DE SAC - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Daiane da Silva Rodrigues,ASSISTENTE DE SAC -TELEFONIA,GS_SAC ATENDIMENTO DE TELEFONIA,Caroline Azzulin,Atendimento a Clientes
+Rubens Zacharias da Silva,ASSISTENTE FISCAL,RC_CTR_FISCAL,Mirele Hexsel,SAC - 1P
+Guilherme da Silva Dias Lara,ASSISTENTE DE FISCAL,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Victor Antoniazi Gonzalez,CONSULTOR EM TECNOLOGIA DA INFORMAÇÃO,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Thiago Obes,COMPRADOR PL,DC_COMPRAS,Felipe Colombo,Compras
+Andre Machado Rocha,ANALISTA DE NEGOCIOS E SISTEMAS PL - INTEGRACOES,TI_GDS_COORDENACA0 DE INTEGRACOES,Luis Paulo Spolador Souto,Fabrica de Softwares
+Karoline Farias de Farias,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Mara Rejane Pereira Oliveira,ASSISTENTE DE SAC 1P,SAC 1P,Mirele Hexsel,SAC - 1P
+Matheus Cantarelli Hoffmann,ANALISTA COMERCIAL JR,DM_MKP_COMERCIAL_CANAIS,VAGO,Tele Vendas
+Rebeca Paulino Longarai Dini,ANALISTA DE E-COMMERCE PL,DC_MKO_E-COMMERCE COMERCIAL,Martha Irigoyen Lamas,E-Commerce Produtos
+Vitoria Ferreira da Silva,ANALISTA COMERCIAL JUNIOR - 1P,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Lauro Mayer da Rocha,ASSISTENTE DE LOGISTICA - RMA,DC_GLO_LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica Administração
+Ricardo Henrique da Silva Figueiredo,ANALISTA DE AUDITORIA INTERNA PL,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Eduardo Horbach Nunes,ANALISTA DE QUALIDADE JR - 3P,DM_MKP_QUALIDADE,Dani Lucas do Nascimento Pereira,Qualidade 3P - Sellers
+Deyvid Henrique Bertholdi,ASSISTENTE ADMINISTRATIVO,98 DC_GLO_CD NAVEGANTES 09,Silmara Lucas de Oliveira,CD Navegantes
+Alex Souza,Analista de Negocios e Sistemas PL,T.I.,Luis Paulo Spolador Souto,Fabrica de Softwares
+Raiza Crispim do Nascimento,ANALISTA DE QUALIDADE PLENO,DM_MKP_QUALIDADE,Juliana Maiara de Souza,Qualidade 3P - Canais
+Kethlyn Camargo Muller,ASSISTENTE DE LOGISTICA - GERENCIAMENTO DE ENTREGAS,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Rafael Rathje Monteiro,ANALISTA DE LOGISTICA JR,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Themyse Martins Salgado,ASSISTENTE DE SAC -1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Andressa Machado Martins,ASSISTENTE DE SAC- 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Fabricio Rodrigues Dias,ANALISTA COMERCIAL SR -SELLERS,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Pietro Goncalves Medeiros,HEAD ESTRATEGIA DE VENDAS B2B,13_DC_FRANQUIAS,Roger Ricardo Bueno Pinto,B2B
+Marcelo Rocho Sironi,ANALISTA COMERCIAL  JR- SELLER,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Bianca Oliveira dos Santos,ASSISTENTE DE CATOLOGO,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Tiago Luiz Bueno da Silva,ANALISTA DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Joao Pedro Boeira Martins de Souza,ADMINISTRADOR DE BANCO DE DADOS,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Kevin Eliseu Cardozo de Oliveira Gall,ANALISTA DE CATALOGO JR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Joao Victor Moreira Mota,ANALISTA DE CATALOGO JR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Antonio Custodio Silva Guimaraes,ANALISTA COMERCIAL PL - SELLERS,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Mirele Hexsel,COORDENADOR(A) DE SAC 1P,GS_MKO_SAC 1P,Patricia Silva,SAC - 1P
+Carlos Eduardo Zanini,ANALISTA FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Jairo Avritchir,DIRETOR DE TECNOLOGIA E INOVACAO,DIRETORIA DE TECNOLOGIA E INOVAÇÃO,Eloana Antoniazi Tonello,Tecnologia da Informação e Inovação
+Thiago Leonardo da Silva,ASSISTENTE DE LOGISTICA - CICLO DO PEDIDO,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Tieli Cavalheiro Beyer,ASSISTENTE DE SAC PL -3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Kananda da Silva Xavier,ANALISTA DE QUALIDADE JR - 3P,DM_MKP_QUALIDADE,Juliana Maiara de Souza,Qualidade 3P - Canais
+Karen Diniz Freire,ANALISTA LOGISTICA SR- TRANSPORTES,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Andrielly Marthyelly Ferreira,JOVEM APRENDIZ,FINANCEIRO,Andreia Dassi de Souza,Contas a Receber
+Ana Luisa Lopes da Silva,JOVEM APRENDIZ,150 - DC MKO CLIENTES ATENDIMENTO ESPECIAL,Daniela Portela Salton,Contas a Pagar
+Matheus Isoppo Vianna,ANALISTA COMERCIAL JR- CANAIS,DM_MKP_COMERCIAL CANAIS,Mauricio Alves Albanus,Comercial Canais - 3P
+Richard Soares da Silva,ANALISTA COMERCIAL SR - SELLER,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Daniele de Castro Magalhaes,ANALISTA COMERCIAL OUT,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Vanessa De Oliveira Dani,ASSISTENTE CONTABIL,RC_CTR_CONTABILIDADE,Paulo Cesar Nunes dos Santos,Contabilidade
+Paulo Cesar Nunes dos Santos,COORDENADOR CONTABIL,RC_CTR_CONTABILIDADE,Jefferson dos Santos Melo,CONTABILIDADE
+Silvio Luis Junior Souza da Rosa,ANALISTA DE MIDIAS DIGITAIS SR,DC_MKO_E-COMMERCE COMERCIAL,Martha Irigoyen Lamas,E-Commerce Produtos
+Victor Roseira Queiroz,ANALISTA DE ESTOQUE PL,LOGISTICA,Andriel Klein Gomes,CD Viana
+Philippe Alves Stephanou,GERENTE EXECUTIVO DE FRANQUIAS,GC_B2B,Roger Ricardo Bueno Pinto,B2B
+Kleiton Felipe Silva Gomes,ANALISTA FISCAL,RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Bruno Alegransi Tonetto,ANALISTA CONTABIL PL,RC_CTR_CONTABILIDADE,Paulo Cesar Nunes dos Santos,Contabilidade
+Bernardo Reali da Silva,ANALISTA DE PESQUISA E DESENVOLVIMENTO PL,DC_IMPORTACAO,Felipe Pereira de Souza,Importação - Produtos
+William Gabriel da Silva Rius,ANALISTA COMERCIAL PL -1P,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Lucas Eduardo Machado Brose,ANALISTA COMERCIAL JR- SELLERS,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Fernando Maneia Costalonga,LIDER OPERACIONAL,LOGISTICA,Joao Gomes Filho,CD Cariacica
+Vanessa da Silva Kuhn,ANALISTA DE QUALIDADE SR,DM_MKP_QUALIDADE,Juliana Maiara de Souza,Qualidade 3P - Canais
+Richard dos Santos Kilian,SUPERVISOR COMERCIAL,FRANQUIAS,Philippe Alves Stephanou,B2B
+Gabriela Mota Schell,JOVEM APRENDIZ,AUDITORIA,Wagner dos Santos Dorneles,Risco e Compliance
+Eduarda Pereira Fernandes,ASSISTENTE DE LOGISITICA - CICLO DO PEDIDO,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Matheus Dassi de Souza,Jovem Aprendiz,TI_GSO_COORDENACAO DE SUSTENTACAO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Leo Felipe Fonseca dos Santos,ANALISTA DE NEGOCIOS E SISTEMAS PL - INTEGRACOES,TI_GDS_COORDENACA0 DE INTEGRACOES,Luis Paulo Spolador Souto,Fabrica de Softwares
+Gideao Trindade dos Santos,LIDER OPERACIONAL,LOGÍSTICA,Silmara Lucas de Oliveira,CD Navegantes
+Vitor Luiz Garcia da Silva,ASSISTENTE ADMINISTRATIVO,LOGISTICA,Silmara Lucas de Oliveira,CD Navegantes
+Diego da Costa Avalos,DESENVOLVEDOR BACK-END,T.I.,Diego Nogueira dos Santos,Fabrica de Softwares
+Jefferson Teixeira da Silva,DESENVOLVEDOR APLICATIVO - PJ,FRANQUIAS,Philippe Alves Stephanou,B2B
+Samuel da SIlva Gomes Ribeiro,JOVEM APRENDIZ,GC_GRH_RECURSOS HUMANOS,Raquel Conceicao Barbieri Goncalves,RH - Benefícios
+Gustavo Aurelio de Souza,CONFERENTE PLENO,LOGISTICA,Silmara Lucas de Oliveira,CD Navegantes
+Fernanda Feil de Moraes,ANALISTA DE CONTROLADORIA PL,RC_GERENCIA DE CONTROLADORIA,Josiane Ferrari Weizenmann,Controladoria
+Carlos Jose Lopes Granja,GERENTE DE ATENDIMENTOS ESPECIAIS,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Diego Calabria,Atendimento a Clientes 1P
+Demetrio Bogowicz,"GERENTE DE SEGURANCA DA INFORMACAO, INFRAESTRUTURA E GOVERNANCA",TI_GERENCIA DE GOVERNANÇA E INFRAESTRUTURA,Jairo Avritchir,"Segurança, Infraestrutura e Governança de TI"
+Graciele Vandam Goncalves de Assis,ANALISTA DE CONTAS A PAGAR,RC_CTR_FINANCEIRO CONTAS A PAGAR,Daniela Portela Salton,Contas a Pagar
+Inatan Colares Seixas,ANALISTA DE CATALOGO JR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Fernanda Oliveira,ASSISTENTE ADMINISTRATIVO,NAVEGANTES,Silmara Lucas de Oliveira,CD Navegantes
+Guilherme Cardoso Santos,ANALISTA FINANCEIRO PL,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Ricardo Bittencourt Viana,ANALISTA DE RISCO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Larissa Alves Debastiani,ANALISTA DE MKT - PJ,FRANQUIAS,Philippe Alves Stephanou,B2B
+Guilherme Bauce Machado,GERENTE DE SUSTENTACAO E OPERACOES DE TI,TI_GERENCIA DE SUSTENTAÇÃO E OPERAÇÃO,Jairo Avritchir,Sustentação e Operações de TI
+Andrieli da Silva Pires,ASSISTENTE DE GARANTIAS PL,DC_IMPORTACAO,Leonardo Gomes Rodrigues,Importação - garantias
+Geovane Gabriel Santhiago,CONFERENTE PLENO,98 DC_GLO_CD NAVEGANTES 09,Silmara Lucas de Oliveira,CD Navegantes
+Jader Peixoto Volkmer,ESPECIALISTA DE GOVERNANCA DE TI,TI_GERENCIA DE GOVERNANÇA E INFRAESTRUTURA,Demetrio Bogowicz,Governança de TI
+Israel da Silva Cunha,ANALISTA FINANCEIRO PL,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Andre Rodrigues Digarais,ANALISTA DE CADASTRO JR,DC_IMPORTACAO,Felipe Pereira de Souza,Importação - Cadastro
+Ana Paula de Brito Bampi,ANALISTA DE ATENDIMENTOS ESPECIAIS PL,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Tatiana de Arruda,SUPERVISOR DE ATENDIMENTO ESPECIAL,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Carlos Jose Lopes Granja,Atendimento Especial
+Felipe Silva da Silva,ASSISTENTE DE QUALIDADE,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Ygor Raul Souza de Castro,ASSISTENTE DE SAC JR - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Jerusa Beatriz Alves,AUDITORA INTERNA,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Henrique Raphael Pacheco,ASSISTENTE DE CATALOGO,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Eduarda Streb Goncalves,ANALISTA DE QUALIDADE JR -1P,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Carlos Eduardo Macchi Rangel,ANALISTA COMERCIAL JR - CANAIS,DM_MKP_COMERCIAL CANAIS,Mauricio Alves Albanus,Comercial Canais - 3P
+Stephanie Rochelle Gozes da Silva,ASSISTENTE DE TELEFONIA,SAC,Caroline Azzulin,Atendimento a Clientes
+Louvair dos Santos Lima,ANALISTA DE DADOS,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Silvia Dornellles Lima,ANALISTA FINANCEIRO CONTAS A PAGAR,FINANCEIRO,Daniela Portela Salton,Contas a Pagar
+Christian Rafael Rodrigues Fraga,ANALISTA,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Aline da Silva Schultz,ASSISTENTE DE SAC JR -3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Raiza Goncalves de Freitas,ASSISTENTE DE CONTAS A PAGAR JR,RC_CTR_FINANCEIRO CONTAS A PAGAR,Daniela Portela Salton,Contas a Pagar
+Karina Santana da Silva,ANALISTA DE NEGOCIOS E SISTEMAS SENIOR - INTEGRACOES,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Veridiana Dias Avila,ASSISTENTE DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Nicolas Nobles Portela,ASSISTENTE DE AUDITORIA INTERNA,RC_AUDITORIA INTERNA E COMPLIANCE,Wagner dos Santos Dorneles,Risco e Compliance
+Ariela Dias Portaluppi,APRENDIZ,RECURSOS HUMANOS,Wagner dos Santos Dorneles,Risco e Compliance
+Henrique Pires,ASSISTENTE DE SAC -3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Mauricio Pohlmann Flores,ANALISTA DE NEGOCIOS E SISTEMAS PL - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Luis Paulo Spolador Souto,Fabrica de Softwares
+Mauro Andre Santos da Silva,ANALISTA DE NEGOCIOS E SISTEMAS PL - SISTEMAS,TI_GDS_COORDENACAO DE SISTEMAS,Luis Paulo Spolador Souto,Fabrica de Softwares
+Daniel Gomes da Rosa,DESENVOLVEDOR FULL STACK SR- SISTEMAS,TI_GDS_COORDENACA0 DE INTEGRACOES,Diego Nogueira dos Santos,Fabrica de Softwares
+Franciele Stenbach,ASSISTENTE DE QUALIDADE,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Taylor Alves Vieira,ASSISTENTE DE SAC JR -1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Jonatan Emanuel Antunes da Silva,ANALISTA DE CATALOGO JR,MARKETPLACE,Cristielen Coutinho da Luz,Catalogo - 3P
+Guilherme da Silveira Lobos,ASSISTENTE DE CATALOGO,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Marcelo da Costa Alvarengo,ANALISTA DE NEGOCIOS E SISTEMAS SR - INTEGRACOES,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Carlos Henrique Branco Rabelo,GERENTE DE PROJETOS,TI_GERENCIA DE PROJETOS PMO,luis alberto Sotto Mayor,Escritório de Projetos - PMO
+Jeferson da Silva Goncalves,ASSISTENTE DE AUDITORIA INTERNA,RC_GESTAO_DE_PATRIMONIO E SEGURANCA,Wagner dos Santos Dorneles,Risco e Compliance
+Everton Marcelo da Silva Borba,ASSISTENTE DE AUDITORIA INTERNA,RC_AUDITORIA INTERNA E COMPLIANCE,Wagner dos Santos Dorneles,Risco e Compliance
+Andrei Diego Bedin,GERENTE DE PROJETOS,TI_GERENCIA DE PROJETOS PMO,luis alberto Sotto Mayor,Escritório de Projetos - PMO
+Isla Cruz Trindade,ANALISTA DE CATEGORIA JR,DC_MKO_E-COMMERCE,Juliane Cristina Kraemer,E-Commerce Comercial
+Luis Felipe de Oliveira Soares,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Andressa Souza Bittencourt,ANALISTA DE NEGOCIOS E SISTEMAS PL,TI_GDS_COORDENACA0 DE INTEGRACOES,Luis Paulo Spolador Souto,Fabrica de Softwares
+Iran Paz da Silveira,APRENDIZ,AUDITORIA,Wagner dos Santos Dorneles,Risco e Compliance
+Gustavo Timponi Goes Cruz,ANALISTA DE BI PL- QUALIDADE 3P,DM_MKP_QUALIDADE,Juliana Maiara de Souza,Qualidade 3P - Canais
+Cristian Eduardo Lorenz,ANALISTA DE NEGOCIOS E SISTEMAS PL,TI_GDS_COORDENACAO DE SISTEMAS,Luis Paulo Spolador Souto,Fabrica de Softwares
+Cristian Rangel de Almeida de Souza,ANALISTA DE QUALIDADE DE SOFTWARE JR,TI_CDQ_QUALIDADE DE SOFTWARE,Leonardo Azambuja dos Santos,Qualidade de Softwares
+Lidiane Regina Goncalves Aleixo,ASSISTENTE DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Juliana Elaine Santos Da Costa Silva,ASSISTENTE DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Maira Misiuk,ASSISTENTE DE SAC JR - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Milena Virginia da Silva,ASSISTENTE DE SAC JR - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Ronaldo dos Santos Amador,ANALISTA COMERCIAL,GALLANT,Mari Marcela Helfenstein,Industria Camara Fria
+Paulo Henrique Nunes Ribeiro,ANALISTA DE NEGOCIOS E SISTEMAS PL - SISTEMAS,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Samantha Vieira Peralta,ANALISTA CUSTUMER SUCCESS,GC_B2B,Philippe Alves Stephanou,B2B
+Dafne Correa Makrakis,ANALISTA DE QUALIDADE DE SOFTWARE JR,TI_CDQ_QUALIDADE DE SOFTWARE,Leonardo Azambuja dos Santos,Qualidade de Softwares
+Sady da Conceicao,ASSISTENTE DE SAC JR - 1P,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Roxandrys Alejandra Ortiz Lima,APRENDIZ,LOGÍSTICA,Gabriel de Paula Santos,Logistica Administração
+Brenda Amador Vargas,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Ariana Gabriela Melo de Quadros,ASSISTENTE DE SAC,GC_B2B,Philippe Alves Stephanou,B2B
+Mateus Pinto Nascimento,ASSISTENTE ADMINISTRATIVO PL,VIANA,Andriel Klein Gomes,CD Viana
+Debora Eloisa Venancio,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Romulo Severo de Freitas,ANALISTA DE QUALIDADE DE SOFTWARE PL,T.I.,Leonardo Azambuja dos Santos,Qualidade de Softwares
+Cristiane Braga Vargas,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Bruna Cardoso,ASSISTENTE ADMINISTRATIVO PL,VIANA,Andriel Klein Gomes,CD Viana
+Leonardo da Fontoura Goulart,ANALISTA DE CATALOGO JR,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Rodrigo da Silveira Ribeiro,ASSISTENTE FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Drielle Dias Oliveira Brunetto,ASSISTENTE DE SAC JR - 3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Jonathan dos Santos Righi,ENGENHEIRO DE DADOS PL,TI_GGT_COORDENACAO DATA ANALYTICS,Silvana Fonseca da Fonseca,Data Analytics
+Leonardo Azambuja dos Santos,COORDENADOR DE QUALIDADE DE SOFTWARE,TI_CDQ_QUALIDADE DE SOFTWARE,Jairo Avritchir,Qualidade de Softwares
+Schuber Keni Borges da Silva,ANALISTA DE AUDITORIA INTERNA,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Bruna Lopes Romero Cogo,ANALISTA CONTABIL SR,RC_CTR_CONTABILIDADE,Paulo Cesar Nunes dos Santos,Contabilidade
+Ana Julia Matos de Lima,ASSISTENTE DE SAC JR -3P,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+Kleyton Hegele Mayer,DEVOPS,TI,Guilherme Bauce Machado,Sustentação e Operações de TI
+Vitor Santos Coelho,ESTAGIARIO,T.I,Guilherme Bauce Machado,Sustentação e Operações de TI
+Julyano Torres Costa,ANALISTA DE QUALIDADE DE SOFTWARE SR,T.I.,Leonardo Azambuja dos Santos,Qualidade de Softwares
+Vinicius Brito Pires,ANALISTA FINANCEIRO PL,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Paulo Leandro Diegues Acosta,ANALISTA DE PROCESSOS - TI,TI_GAP_COORDENAÇÃO DE ARQUITETURA E PROCESSOS,Diego Nogueira dos Santos,Processos de TI
+Rodrigo de Quadros Vicencio,GERENTE DE MARKETING,DC_MARKETING,Diego Calabria,Marketing
+Lucas Pahl Schaan Nunez,ADVOGADO,FISCAL,Guilherme Ricciardi Correa Lopes,Jurídico Tributário
+Patricia Menezes Barcellos,ANALISTA DE QUALIDADE DE SOFTWARE SR,TI_CDQ_QUALIDADE DE SOFTWARE,Leonardo Azambuja dos Santos,Qualidade de Softwares
+Lucas Delavale Massignam,ESPECIALISTA EM INFRAESTRUTURA,TI_GSI_COORDENACAO AMBIENTES SERVIDORES,Demetrio Bogowicz,Infraestrutura
+Karen Fernanda Saballa Nicoletti,GERENTE DE PROJETOS,TI_GERENCIA DE PROJETOS PMO,luis alberto Sotto Mayor,Escritório de Projetos - PMO
+Rafael Dias Bauer,GERENTE DE PROJETOS,TI_GERENCIA DE PROJETOS PMO,luis alberto Sotto Mayor,Escritório de Projetos - PMO
+Silvio Cesar Flores da Silva,ANALISTA DE NEGOCIOS E SISTEMAS PL,TI,Luis Paulo Spolador Souto,Fabrica de Softwares
+Diego Cunha Franz,SUPERVISOR DE PECAS,PECAS,Luis Clodomiro Trindade Dorneles,Gallant Peças
+Letiere Pinto Ernest,,Gallant Importação,Felipe Pereira de Souza,Importação - Cadastro
+Andressa Moreira Soledade,ASSISTENTE DE SAC JR,SAC,Caroline Azzulin,SAC- 3P
+Diames Almeida Taborda,ESPECIALISTA EM SEGURANCA DA INFORMACAO,T. I.,Demetrio Bogowicz,Segurança da Informação
+Diego Lopes De Fraga,ANALISTA DE SEGURANCA DA INFORMACAO SR,T. I.,Demetrio Bogowicz,Segurança da Informação
+Nicolas Machado De Oliveira,JOVEM APRENDIZ,RC_GESTAO_DE_RISCOS,Elifas Levi Rocha dos Santos,Risco e Compliance
+Giberto Wolunezuk Affonso,Analista de Planejamento JR,WEB CALL CENTER,Carlos Jose Lopes Granja,Tele Vendas
+David Camargo Vaz,ASSISTENTE DE SAC JR,SAC,Caroline Azzulin,SAC- 3P
+Arilton Rosa Dos Santos Junior,ANALISTA COMERCIAL,GALLANT,Mari Marcela Helfenstein,Industria Camara Fria
+Franciele Oliveira Pereira,Analista de Vendas,WEB CALL CENTER,VAGO,Tele Vendas
+Anderson Luis Rabello Franco,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Helen Siqueira da Silva,ASSISTENTE DE SAC JR,SAC 3P,Caroline Azzulin,SAC- 3P
+Bianca Beatriz Pereira de Almeida,ASSISTENTE DE SAC JR,SAC 3P,Caroline Azzulin,SAC- 3P
+Raphael Fernandes Fraga,ASSISTENTE DE SAC JR,SAC 3P,Caroline Azzulin,SAC- 3P
+Richard Pereira de Freitas,GESTOR DE AUTOMACAO,13_DC_FRANQUIAS,Pietro Goncalves Medeiros,B2B - Midias e Automação
+Joyce Pimentel Farias,ANALISTA DE COMEX,COMPRAS,Felipe Pereira de Souza,Importação - compras
+Daniel Martins Chiapinotto,ANALISTA DE MIDIA PAGA,13_DC_FRANQUIAS,Pietro Goncalves Medeiros,B2B - Midias e Automação
+Victoria Maria Martins Ribeiro,ASSISTENTE DE COMPRAS,COMPRAS,Guilherme da Silva Lemos,Compras
+Larissa Camargo Gomes Stasinski,JOVEM APRENDIZ,FISCAL,Juliana Haubert Lopes,Fiscal
+Maria Luiza de Souza Alves,JOVEM APRENDIZ,FINANCEIRO,Daniela Portela Salton,Contas a Pagar
+Marco Poester Rogowski,ANALISTA COMERCIAL - CAMERAS FRIA,GALLANT,Mari Marcela Helfenstein,Industria Camara Fria
+Daiane Bueno Alves,ANALISTA DE VENDAS,WEB CALL CENTER,VAGO,Tele Vendas
+Bruno Silveira de Souza,ANALISTA CONTABIL JR,RC_CTR_CONTABILIDADE,Paulo Cesar Nunes dos Santos,Contabilidade
+Cristof Cardones,ASSISTENTE DE ESTOQUE,DC_IMPORTACAO,Felipe Pereira de Souza,Importação - Estoque
+Thauan Alexander Barbosa Soares,ESTAGIARIO TI,TI_GSO_COORDENACAO DE SUSTENTACAO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Thiago Paetzold de Almada,ASSISTENTE DE TI JR,TI_GSO_COORDENACAO DE SUSTENTACAO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Jaqueline da Silva,DESENVOLVEDOR FULLSTACK,TI_GDS_COORDENACA0 DE INTEGRACOES,Diego Nogueira dos Santos,Fabrica de Softwares
+Andressa Rodrigues Dos Santos,VENDEDORA,GC_B2B,Philippe Alves Stephanou,B2B
+Daniele Paiva Rodrigues,ANALISTA COMERCIAL JR - SELLERS,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Gabriella Weck Zanetti,ASSISTENTE DE COMPRAS,DC_COMPRAS,Sophia Uzun Jacob,Compras
+Roger Leonhardt Junior,ANALISTA FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Laura Hoffmann da Silva,APRENDIZ,TI_GSO_COORDENACAO DE SUSTENTACAO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Victoria Forte da Silva,ANALISTA DE MIDIAS DIGITAIS,DC_MKO_COORNENACAO DE E-COMMERCE,Martha Irigoyen Lamas,E-Commerce Produtos
+Matheus Rebes,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica Administração
+Leonardo Machado Morozini,ASSISTENTE DE CATALOGO,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catalogo - 3P
+Luiz Carlos Costa Borges Junior,ASSISTENTE DE AUDITORIA INTERNA,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Alice Dezzanetti da Rosa,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Munique Freitas dos Santos,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Janaina Soares da Silva,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Laisa Queiroz Hoffmann,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Matheus Lomeu de Souza,CONFERENTE,DC_GLO_CD CARIACICA 05,Joao Gomes Filho,CD Cariacica
+Natalia da Silva Ortiz,ASSISTENTE DE SAC JR,GS_SAC 1P,Mirele Hexsel,SAC - 1P
+Ryan Cardoso de Sena Silva,ESTAGIARIO,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Joyce Matias Bomfim,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Luciellen Andrade do Nascimento,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Camila Machado Borba,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Leticia Silveira dos Santos,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Vitoria Eduarda da Silva Azevedo,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Adriano Paltiano Vieira,COMERCIAL,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Kamilly Prado dos Santos,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Mariana Batista Pristupa,ANALISTA COMERCIAL JR,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Adriano Belmonte Melgar,ESPECIALISTA EM PLANEJAMENTO ESTRATEGICO,RC_GERENCIA DE CONTROLADORIA,Jefferson dos Santos Melo,CONTROLADORIA
+Maria Eduarda Azevedo Kuhn,ANALISTA DE VENDAS,WEB CALL CENTER,VAGO,Tele Vendas
+Priscila Constante de Oliveira,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Gustavo de Matos,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Julia Granato Silveira,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA - TRANSPORTES,Mauricio Marquezotti da Silva,Logistica Transportes
+Michael Ribeiro Oliveira,ASSISTENTE DE SAC JR,GS_SAC 3P,Caroline Azzulin,SAC- 3P
+Melissa Gabriele Goncalves dos Santos,JOVEM APRENDIZ,DC_MKO_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Arthur Vieira de Souza,CONFERENTE,LOGISTICA,Andriel Klein Gomes,CD Viana
+Bianca Pacheco da Silva,ASSISTENTE DE COMPLIANCE,RC_AUDITORIA INTERNA E COMPLIANCE,Wagner dos Santos Dorneles,Risco e Compliance
+Joice Gregis Likoski,ESPECIALISTA EM GOVERNANCA,TI_GERENCIA DE GOVERNANÇA E INFRAESTRUTURA,Demetrio Bogowicz,Governança de TI
+Camila Armange Schneider,ANALISTA DE QUALIDADE JR,DM_MKP_QUALIDADE,Juliana Maiara de Souza,Qualidade 3P - Canais
+Francine Gomes Flores,ANALISTA DE ATENDIMENTOS ESPECIAIS,ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Eduarda dos Santos Ribeiro,ANALISTA DE ATENDIMENTO ESPECIAL,ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Joao Pedro Rosa de Oliveira,ANALISTA DE INFRAESTRUTURA PL,TI_GSO_COORDENACAO DE SUSTENTACAO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Guilherme Lompa Moreira,ESTAGIARIO,TI_GSO_COORDENACAO DE SUSTENTACAO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Igor da Rosa Sampaio,ESTAGIARIO,TI_GSO_COORDENACAO DE SUSTENTACAO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Leonardo Augusto de Marco do Canto,ANALISTA DE MIDIA,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Artur Santos Ribeiro,ANALISTA COMERCIAL JR-SELLER,DM_MKP_COMERCIAL SELLERS,Gian Silva Ilha,Comercial Sellers - 3P
+Joyce Carina da Costa Coelho,ANALISTA DE RH SR - T&D,GC_GRH_RECURSOS HUMANOS,Raquel Conceicao Barbieri Goncalves,RH - Treinamento e Desenvolvimento
+Kalvin Azevedo Lima,ANALISTA DE BI,TI_GGT_COORDENACAO DATA ANALYTICS,Silvana Fonseca da Fonseca,Data Analytics
+Juliana Bos da Silva,VENDEDORA PLENO,GC_B2B,Richard dos Santos Kilian,B2B
+Maria Fernanda Oteiro de Oliveira,ASSISTENTE DE SAC JR,GS_MKO_SAC 1P,Mirele Hexsel,SAC - 1P
+Gabriela da Silva,ASSISTENTE DE TI JR,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Ruanda Da Silva Custodio,ASSISTENTE FINANCEIRO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Kismara Beatriz Ribeiro,ANALISTA FINANCEIRO PL,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Thuane Martins,VENDEDORA,FRANQUIAS,Richard dos Santos Kilian,B2B
+Ana Carolina Gomes Ramos,ANALISTA DE MARKETING JR,80 DC_MARKETING,Rodrigo de Quadros Vicencio,Marketing
+Julia Cardoso Uhlrich,ASSISTENTE DE GARANTIAS,DC_IMPORTACAO,Leonardo Gomes Rodrigues,Importação - garantias
+Maria Eduarda Oliveira Vieira,ASSISTENTE DE SAC JR,05 GS_SAC_1P,Caroline Azzulin,SAC- 3P
+Pedro Reginato Braga,ANALISTA COMERCIAL JR,DC_MKO_COMERCIAL,Vinicius Muller Rocha Fonseca,Comercial - 1P
+Claudio Henrique da Silva Teixeira,ASSISTENTE ADMINISTRATIVO,98 DC_GLO_CD NAVEGANTES 09,Silmara Lucas de Oliveira,CD Navegantes
+Allan Marcos Davila Cardoso,ASSISTENTE DE SAC JR,06 GS_SAP_3P,Caroline Azzulin,SAC- 3P
+Diego Nogueira dos Santos,ARQUITETO DE SISTEMAS,DIRETORIA DE TECNOLOGIA E INOVACAO,Jairo Avritchir,Arquitetura e Processos
+Barbara Castro Prates,ASSISTENTE DE SAC JR,GS_MKP_SAC 3P,Caroline Azzulin,SAC- 3P
+William Bairros Laurentino,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Italo Silva Barreto,DESENVOLVEDOR FULL STACK SR,TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Henrique Silva Lopes,ASSISTENTE DE LOGISTICA,LOGISTICA - ADMINISTRACAO,Gabriel de Paula Santos,Logistica administração
+Gustavo Rosa de Abreu,ANALISTA CONTAS A PAGAR,CONTAS A PAGAR,Daniela Portela Salton,Contas a Pagar
+Terence Kleber,AGILISTA,T.I,luis alberto Sotto Mayor,Escritório de Projetos - PMO
+Henrique Guimaraes Lopes,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,DM_MKP_CLIENTES_ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Laira Trece De Siqueira Santos,ANALISTA DE MARKETING PL,MARKETING,Rodrigo de Quadros Vicencio,Marketing
+Suelen da Silva Machado,ANALISTA DE ATENDIMENTOS ESPECIAIS JR,150 DM_MKP_CLIENTES ATENDIMENTO ESPECIAL,Tatiana de Arruda,Atendimento Especial
+Suzana Marina Porto Pereira,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA_ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica administração
+Lucas Rischtter da Silveira,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA - ADMINISTRACAO,Leticia de Freitas Cardoso,Logistica Administração
+Henrique Rodrigues Mesquita da Silva,Assistente de Auditoria Interna,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Rogerio Dos Santos Moreira Da Silva,ASSISTENTE DE SAC JR,156 GS_SAC ATENDIMENTO DE TELEFONIA,Caroline Azzulin,Atendimento a Clientes
+Evelin Dominique Pinheiro Dutra,ASSISTENTE DE CATALOGO,DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catálogo e Onboarding
+Laion Renato Da Costa,Assistente,3 DC_IMPORTACAO,Felipe Pereira de Souza,Importação - garantias
+Larissa Dos Santos Ventura,ASSISTENTE DE SAC JR,05 GS_SAC_1P,Mirele Hexsel,SAC - 1P
+Isabela Souza da Silva,ASSISTENTE DE SAC JR,06 GS_SAP_3P,Caroline Azzulin,SAC- 3P
+Khetley Daiane Silva Hegner,ASSISTENTE DE SAC JR,05 GS_SAC_1P,Mirele Hexsel,SAC - 1P
+Dienifer Goncalves Cardoso,ASSISTENTE DE CANCELAMENTO E DEVOLUCOES,06 GS_SAP_3P,Caroline Azzulin,SAC- 3P
+Dafne Silva Dos Santos,Aprendiz,RC_GERENCIA DE CONTROLADORIA,Josiane Ferrari Weizenmann,Controladoria
+Bryan Paim Rambo,Aprendiz,RC_AUDITORIA INTERNA E COMPLIANCE,Elifas Levi Rocha dos Santos,Auditoria
+Joao Aparecido de Freitas,GERENTE DE E-COMMERCE,DM_MKP_GERENCIA_DE_E-COMMERCE,Diego Calabria,E-Commerce Comercial
+Simone Barcelos da silva,ASSISTENTE DE SAC JR,06 GS_SAP_3P,Caroline Azzulin,SAC- 3P
+Ingrid Lima De Moura,ASSISTENTE DE GARANTIAS,83 DC_IMPORTACAO,Leonardo Gomes Rodrigues,Importação - garantias
+Marina Vigel Olmedo,VENDEDORA PLENO,13_B2B,Richard dos Santos Kilian,B2B
+Bruna Strohmeier Soares Cerqueira Oliveira,ANALISTA COMERCIAL PLENO,123 DM_MKP_E-COMMERCE COMERCIAL,Juliane Cristina Kraemer,E-Commerce Comercial
+Michele Cury Scopel,ANALISTA DE RH PLENO,RECURSOS_HUMANOS,Raquel Conceicao Barbieri Goncalves,RH - Recrutamento e Seleção 
+Davi da Rosa Balestrin,ANALISTA COMERCIAL JR,DM_MKP_E-COMMERCE,Juliane Cristina Kraemer,E-Commerce Comercial
+Jose Nivaldo Pereira Junior,ANALISTA COMERCIAL,GC_INDUSTRIA_CAMARAS_FRIAS,Mari Marcela Helfenstein,Industria Camara Fria
+Mauricio Klohs Caldas,ANALISTA COMERCIAL SR,GC_INDUSTRIA_CAMARAS_FRIAS,Mari Marcela Helfenstein,Industria Camara Fria
+Leandro Mayer,ANALISTA COMERCIAL,GC_INDUSTRIA_CAMARAS_FRIAS,Mari Marcela Helfenstein,Industria Camara Fria
+Caroline Azevedo Rodrigues,ANALISTA FINANCEIRO(A),109 RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Gabriel Allgayer Albuquerque,ANALISTA COMERCIAL JR,DM_MKP_E-COMMERCE,Juliane Cristina Kraemer,E-Commerce Comercial
+Fabricio Vidor Vaz,Especialista de Integridade Comercial,76 DC_GERENCIA DE MARKETPLACE OUT,Lisiane Mello Martins,Comercial - 1P
+Luiz Alberto de Sotto Mayor Filho,GERENTE DE PMO,DIRETORIA_DE_TECNOLOGIA_E_INFORMACAO,Jairo Avritchir,Escritório de Projetos - PMO
+Ricardo andres Castro Ahumada,DESENVOLVEDOR FULL STACK SR,135 TI_GDS_COORDENACAO DE SISTEMAS,Diego Nogueira dos Santos,Fabrica de Softwares
+Diogo Avila Canko,ANALISTA COMERCIAL PLENO,123 DM_MKP_E-COMMERCE COMERCIAL,Juliane Cristina Kraemer,E-Commerce Comercial
+Rafael Cardoso Airoldi,ANALISTA DE COMPRAS PLENO,01 GERENCIA DE CONTROLADORIA,Josiane Ferrari Weizenmann,Compras Institucionais
+Ariane Cardoso Luciano Henrique,ASSISTENTE ADMINISTRATIVO,DC_GLO_VIANA_04,Andriel Klein Gomes,CD Viana
+Adriana Silva da Silva,ASSITENTE DE SAC JR,GS_SAC_1P,Mirele Hexsel,SAC - 1P
+Gabriel Paris de Moura Oliveira,ASSISTENTE DE QUALIDADE,DC_MKO_QUALIDADE,Marciely da Silva Oliveira,Qualidade 1P
+Erica Francine De Oliveira,ANALISTA COMERCIAL JR,118 DC_MKO_COMERCIAL,Paulo Roberto Nicolay,Novos Negócios - 1P
+Patrick Pedro Garcia,ASSISTENTE DE CADASTRO,DC_IMPORTACAO,Felipe Pereira de Souza,Importação - Cadastro
+Mateus Marco Barreiro,ASSISTENTE DE RECEBIMENTO,DC_GLO_CD_PORTO_ALEGRE_01,Gabriel de Paula Santos,CD Porto Alegre
+Nathaly Iarto Oliveira Barbosa,ANALISTA DE NEGOCIOS E SISTEMAS JR,TI_GDS_COORDENAÇÃO DE SISTEMAS,Guilherme Bauce Machado,Sustentação e Operações de TI
+Camila de Deus Scheuer,ANALISTA DE RISCO,RC_CTR_FINANCEIRO CONTAS A RECEBER,Andreia Dassi de Souza,Contas a Receber
+Sabrina Lima Ramos,ASSISTENTE DE SAC JR,05 GS_SAC_1P,Mirele Hexsel,SAC - 1P
+Thayla Santos Rosa,ASSISTENTE DE SAC JR,156 GS_SAC ATENDIMENTO DE TELEFONIA,Caroline Azzulin,Atendimento a Clientes
+Stephanie Nogueira Da Rosa,ASSISTENTE DE SAC JR,06 GS_SAP_3P,Caroline Azzulin,SAC- 3P
+Dariane Silva,ASSISTENTE DE SAC JR,GS_SAC_1P,Mirele Hexsel,SAC - 1P
+Bruno Souza Da Rosa,ANALISTA DE NEGOCIOS E SISTEMAS PL,TI_GSO_COORDENAÇÃO DE SUSTENTAÇÃO,Guilherme Bauce Machado,Sustentação e Operações de TI
+Byanca De Andrade Dos Santos,ANALISTA DE CATALOGO JUNIOR,126 DM_MKP_CATALOGO E ONBOARDING,Cristielen Coutinho da Luz,Catalogo - 3P
+Pedro Henrique Mendes Barbosa,ASSISTENTE DE LOGISTICA,DC_GLO_LOGISTICA,Gabriel de Paula Santos,Logistica Administração
+William De Souza De Amaral,ANALISTA FISCAL,108 RC_CTR_FISCAL,Juliana Haubert Lopes,Fiscal
+Jairo Candido da Silva Namiki,ANALISTA DE QUALIDADE DE SOFTWARE PL,TI_CDQ_QUALIDADE DE SOFTWARE,Leonardo Azambuja dos Santos,Qualidade de Softwares
+VAGO,SUPERVISOR DE TELE VENDAS,DM_MKP_TELE-VENDAS,Carlos Jose Lopes Granja,Carlos Jose Lopes Granja

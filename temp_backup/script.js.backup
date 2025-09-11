@@ -623,18 +623,13 @@ function renderGrupoSubordinados(container, subordinados, tipo, gestor) {
     container.appendChild(titulo);
     
     const subordinadosContainer = document.createElement('div');
-    // Aplicar classe CSS específica baseada no tipo
-    if (tipo === "coordenador") {
-        subordinadosContainer.className = "coordenadores-section";
-        subordinadosContainer.setAttribute("data-count", subordinados.length.toString());
-    } else {
-        subordinadosContainer.style.cssText = `
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px 0;
-        `;
-    }    
+    subordinadosContainer.style.cssText = `
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px 0;
+    `;
+    
     subordinados.forEach(subordinado => {
         const card = createColaboradorCard(subordinado, tipo);
         

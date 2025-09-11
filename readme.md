@@ -101,11 +101,24 @@ npm start
 http://localhost:3000
 ```
 
-### Com Docker
+### Com Docker (NGINX)
 
+Opção A — Docker direto:
 ```bash
-docker build -t organograma .
-docker run -p 3000:3000 organograma
+docker build -t organograma-web .
+docker run --name organograma-web -p 8080:80 organograma-web
+# Abra http://localhost:8080
+```
+
+Opção B — Docker Compose (inclui serviço de ferramentas):
+```bash
+docker compose up --build -d
+# Abra http://localhost:8080
+
+# Rodar scripts utilitários (exemplos):
+docker compose run --rm tools npm run migrate-csv -- ./base_atualizada_colaboradores.csv
+docker compose run --rm tools npm run update-area -- ./base_atualizada_colaboradores.csv
+docker compose run --rm tools npm run remove-departamento
 ```
 
 ## 📁 Estrutura do Projeto
