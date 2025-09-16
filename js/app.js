@@ -414,8 +414,6 @@ function setupEditColaboradorModal() {
 
 // Função de teste para debug
 function testEditModal(colaborador) {
-    alert('🎨 TESTE: Função testEditModal chamada! Nome: ' + getNome(colaborador));
-    
     const modal = document.getElementById('edit-colaborador-modal');
     console.log('🔍 Modal encontrado:', !!modal);
     
@@ -429,7 +427,6 @@ function testEditModal(colaborador) {
 
 // Nova função de editar sem caracteres especiais
 function editColaboradorModal(colaborador) {
-    alert('NOVA FUNCAO EDIT CHAMADA! Nome: ' + getNome(colaborador));
     console.log('Nova funcao de editar executada');
     
     // Buscar o modal
@@ -1982,7 +1979,7 @@ function createColaboradorCard(colaborador, tipo) {
     card.appendChild(cargoElement);
     card.appendChild(deptElement);
     
-    // Adicionar botões de ação (editar/excluir)
+    // Adicionar botões de ação (apenas editar)
     const actionsContainer = document.createElement('div');
     actionsContainer.className = 'card-actions';
     
@@ -1990,6 +1987,7 @@ function createColaboradorCard(colaborador, tipo) {
     editBtn.className = 'action-btn edit-btn';
     editBtn.innerHTML = '✏️';
     editBtn.title = 'Editar colaborador';
+    editBtn.setAttribute('data-tooltip', 'Editar');
     
     // Usar addEventListener em vez de onclick
     editBtn.addEventListener('click', (e) => {
@@ -2011,26 +2009,7 @@ function createColaboradorCard(colaborador, tipo) {
         }
     });
     
-    const deleteBtn = document.createElement('button');
-    deleteBtn.className = 'action-btn delete-btn';
-    deleteBtn.innerHTML = '🗑️';
-    deleteBtn.title = 'Excluir colaborador';
-    
-    // Usar addEventListener em vez de onclick
-    deleteBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        
-        console.log('🗑️🗑️🗑️ EVENTO DELETE BUTTON CLICADO! 🗑️🗑️🗑️');
-        console.log('🗑️ Target do evento:', e.target);
-        console.log('🗑️ Colaborador para excluir:', getNome(colaborador));
-        
-        handleDeleteColaborador(colaborador);
-    });
-    
     actionsContainer.appendChild(editBtn);
-    actionsContainer.appendChild(deleteBtn);
     card.appendChild(actionsContainer);
     
     return card;
@@ -2208,6 +2187,129 @@ function checkAuthStatus() {
     return !!user;
 }
 
+// ===============================================================================
+// FUNÇÃO DE EXPORTAÇÃO XLSX
+// ===============================================================================
+
+function exportToXLSX() {
+    try {
+        console.log('📊 Iniciando exportação XLSX...');
+        
+        if (!colaboradoresData || colaboradoresData.length === 0) {
+            alert('Nenhum dado para exportar!');
+            return;
+        }
+
+        console.log('🔍 Total de colaboradores antes do processamento:', colaboradoresData.length);
+
+        // Remover duplicatas baseado no nome do colaborador
+        const colaboradoresUnicos = colaboradoresData.filter((colaborador, index, array) => {
+            const nome = getNome(colaborador);
+            const primeiroIndice = array.findIndex(c => getNome(c) === nome);
+            return index === primeiroIndice;
+        });
+
+        console.log('✅ Colaboradores únicos após remoção de duplicatas:', colaboradoresUnicos.length);
+        console.log('📊 Duplicatas removidas:', colaboradoresData.length - colaboradoresUnicos.length);
+
+        // Debug detalhado para verificar campos do departamento
+        console.log('\n🔍 Verificando campos de departamento nos primeiros 5 registros:');
+        for (let i = 0; i < Math.min(5, colaboradoresUnicos.length); i++) {
+            const colaborador = colaboradoresUnicos[i];
+            console.log(`Colaborador ${i + 1}:`);
+            console.log('  Nome:', getNome(colaborador));
+            console.log('  Chaves relacionadas a departamento:', Object.keys(colaborador).filter(key => 
+                key.toLowerCase().includes('departamento') || 
+                key.toLowerCase().includes('depart') ||
+                key.toLowerCase().includes('dept')
+            ));
+        }
+
+        // Preparar dados para exportação
+        const exportData = colaboradoresUnicos.map((colaborador, index) => {
+            
+            const nome = getNome(colaborador);
+            const cargo = colaborador['Cargo'] || colaborador['cargo'] || '';
+            const area = colaborador['Área'] || colaborador['Areas'] || colaborador['area'] || '';
+            
+            // O campo "Departamento" na exportação será preenchido com o valor de "Área"
+            // pois nos dados originais só temos "Área"
+            const departamento = area; // Usar área como departamento
+            
+            const gestor = colaborador['Superior imediato'] || 
+                          colaborador['Superior_imediato'] || 
+                          getGestor(colaborador) || '';
+            
+            // Log para os primeiros registros
+            if (index < 3) {
+                console.log(`\n📊 Dados extraídos para colaborador ${index + 1}:`);
+                console.log('Nome:', nome);
+                console.log('Cargo:', cargo);
+                console.log('Área:', area);
+                console.log('Departamento (=Área):', departamento);
+                console.log('Gestor:', gestor);
+            }
+            
+            return {
+                'Nome': nome,
+                'Cargo': cargo,
+                'Área': area,
+                'Departamento': departamento,
+                'Gestor': gestor
+            };
+        })
+        // Filtrar registros que tenham pelo menos nome preenchido
+        .filter(item => item.Nome && item.Nome.trim() !== '');
+
+        console.log('\n📊 Dados finais preparados para exportação:');
+        console.log('Total final de registros:', exportData.length);
+        console.log('📊 Registros com cargo preenchido:', exportData.filter(item => item.Cargo && item.Cargo.trim()).length);
+        console.log('📊 Registros com área preenchida:', exportData.filter(item => item.Área && item.Área.trim()).length);
+        console.log('📊 Registros com departamento preenchido:', exportData.filter(item => item.Departamento && item.Departamento.trim()).length);
+        console.log('📊 Registros com gestor preenchido:', exportData.filter(item => item.Gestor && item.Gestor.trim()).length);
+
+        // Criar workbook e worksheet
+        const wb = XLSX.utils.book_new();
+        const ws = XLSX.utils.json_to_sheet(exportData);
+
+        // Configurar largura das colunas otimizadas
+        const colWidths = [
+            { wch: 35 }, // Nome
+            { wch: 40 }, // Cargo
+            { wch: 25 }, // Área
+            { wch: 25 }, // Departamento
+            { wch: 35 }  // Gestor
+        ];
+        ws['!cols'] = colWidths;
+
+        // Adicionar worksheet ao workbook
+        XLSX.utils.book_append_sheet(wb, ws, 'Colaboradores');
+
+        // Gerar nome do arquivo com data atual
+        const hoje = new Date();
+        const dataStr = hoje.toISOString().split('T')[0]; // YYYY-MM-DD
+        const nomeArquivo = `organograma_colaboradores_${dataStr}.xlsx`;
+
+        // Fazer download do arquivo
+        XLSX.writeFile(wb, nomeArquivo);
+        
+        console.log(`✅ Arquivo exportado: ${nomeArquivo}`);
+        console.log(`📊 Total de registros exportados: ${exportData.length}`);
+        
+        // Mostrar estatísticas dos dados
+        const comCargo = exportData.filter(item => item.Cargo && item.Cargo.trim()).length;
+        const comArea = exportData.filter(item => item.Área && item.Área.trim()).length;
+        const comDepartamento = exportData.filter(item => item.Departamento && item.Departamento.trim()).length;
+        const comGestor = exportData.filter(item => item.Gestor && item.Gestor.trim()).length;
+        
+        alert(`Exportação concluída! ✅\n\nArquivo: ${nomeArquivo}\nTotal: ${exportData.length} colaboradores únicos\n\nDados preenchidos:\n• Cargos: ${comCargo}\n• Áreas: ${comArea}\n• Departamentos: ${comDepartamento}\n• Gestores: ${comGestor}\n\n(Duplicatas removidas: ${colaboradoresData.length - colaboradoresUnicos.length})`);
+        
+    } catch (error) {
+        console.error('❌ Erro na exportação XLSX:', error);
+        alert('Erro ao exportar arquivo. Verifique o console para detalhes.');
+    }
+}
+
 // Inicializar aplicação
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('🚀 Inicializando aplicação (fase UI)...');
@@ -2225,6 +2327,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     initFirestoreIfNeeded();
     const logoutButton = document.getElementById('btn-logout');
     if (logoutButton) logoutButton.addEventListener('click', handleLogout);
+    
+    const exportButton = document.getElementById('btn-export-xlsx');
+    if (exportButton) exportButton.addEventListener('click', exportToXLSX);
+    
     console.log('✅ UI pronta. Aguardando Firestore/Auth para carregar dados.');
     // Fallback: se em 5000ms nenhum dado carregado, usa dados locais
     setTimeout(async () => {

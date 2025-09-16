@@ -5,9 +5,16 @@
     gap: 18px;
     overflow-x: auto;
     padding: 10px 6px 25px 6px;
-    justify-content: flex-start;
+    justify-content: center !important; /* Centralizar elementos */
+    width: 100% !important;
+    margin: 0 auto !important;
     scrollbar-width: thin;
     scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+/* Força centralização para todos os elementos filhos */
+.horizontal-level > * {
+    margin: 0 auto;
 }
 
 .horizontal-level::-webkit-scrollbar {
@@ -141,49 +148,55 @@ header {
     top: 0;
     z-index: 1000;
     transition: all var(--transition-normal);
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
+    min-height: 80px; /* Altura mínima para evitar colapso */
 }
 
 .header-left {
     flex-shrink: 0;
+    min-width: 0; /* Permite que o conteúdo se ajuste */
+    flex: 1; /* Ocupa espaço disponível */
+    max-width: 70%; /* Limita o espaço em telas grandes */
 }
 
 .header-logo {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: 20px; /* Aumentado de var(--spacing-md) para 20px */
 }
 
 .header-logo-img {
-    width: 120px;
+    width: 160px; /* Aumentado de 120px para 160px */
     height: auto;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
     transition: transform var(--transition-normal);
     max-width: 100%;
     flex-shrink: 0;
 }
 
 .header-logo-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Reduzido o hover para não ficar exagerado */
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 50%, var(--accent-color) 100%);
+    font-size: 1.75rem; /* Aumentado de 1.5rem para 1.75rem */
+    font-weight: 700; /* Reduzido de 800 para 700 para melhor legibilidade */
+    background: linear-gradient(135deg, #1e40af 0%, var(--primary-color) 30%, #3b82f6 70%, #60a5fa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em; /* Reduzido para melhor legibilidade */
     position: relative;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
 }
 
 /* ==================== NAVEGAÇÃO MELHORADA ==================== */
@@ -191,10 +204,10 @@ header h1 {
 .header-nav {
     display: flex;
     align-items: center;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-md);
     flex-wrap: wrap;
     justify-content: flex-end;
-    flex: 1;
+    flex-shrink: 0; /* Impede que encolha demais */
     min-width: 0;
 }
 
@@ -257,38 +270,212 @@ nav button.active {
     box-shadow: var(--shadow-lg);
 }
 
-/* ==================== BOTÃO ADICIONAR DESTACADO ==================== */
-
-.add-button {
-    background: linear-gradient(135deg, var(--success-color), #059669) !important;
-    color: white !important;
-    border-color: var(--success-color) !important;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
-    font-weight: 700 !important;
-    padding: 0.75rem 1.25rem !important;
-    position: relative;
-    overflow: hidden;
-    min-width: 100px !important;
-}
-
-.add-button::before {
-    content: '➕';
-    margin-right: 0.25rem;
-    font-size: 0.875rem;
-}
-
-.add-button:hover {
-    background: linear-gradient(135deg, #059669, var(--success-color)) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4) !important;
-}
-
-/* ==================== BOTÕES DO HEADER ==================== */
+/* ==================== BOTÕES DO HEADER - DESIGN MODERNO ==================== */
 
 .header-buttons {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     align-items: center;
+}
+
+/* Base para todos os botões */
+.header-buttons .btn {
+    border-radius: 12px !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    min-width: auto !important;
+    letter-spacing: 0.25px !important;
+}
+
+.header-buttons .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.header-buttons .btn:active {
+    transform: translateY(0) !important;
+    transition: all 0.1s ease !important;
+}
+
+/* ==================== BOTÃO EXPORTAR XLSX - MINIMALISTA ==================== */
+
+.export-button {
+    background: #6B7280 !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.export-button:hover {
+    background: #4B5563 !important;
+    box-shadow: 0 4px 16px rgba(107, 114, 128, 0.3) !important;
+}
+
+.export-button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.2) !important;
+}
+
+/* ==================== BOTÃO ADICIONAR - MINIMALISTA ==================== */
+
+.add-button {
+    background: #6B7280 !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.add-button::before {
+    content: none !important; /* Remove o emoji */
+}
+
+.add-button:hover {
+    background: #4B5563 !important;
+    box-shadow: 0 4px 16px rgba(107, 114, 128, 0.3) !important;
+}
+
+.add-button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.2) !important;
+}
+
+/* ==================== BOTÃO SAIR - MINIMALISTA ==================== */
+
+.btn-danger {
+    background: #6B7280 !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.btn-danger:hover {
+    background: #4B5563 !important;
+    box-shadow: 0 4px 16px rgba(107, 114, 128, 0.3) !important;
+}
+
+.btn-danger:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.2) !important;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+/* Telas médias - Tablets em paisagem */
+@media (max-width: 1024px) {
+    header {
+        padding: var(--spacing-md) var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+    
+    .header-left {
+        max-width: 60%;
+    }
+    
+    .header-logo {
+        gap: 15px;
+    }
+    
+    .header-logo-img {
+        width: 140px;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    .header-left {
+        max-width: 100%;
+        flex: none;
+    }
+    
+    .header-logo {
+        justify-content: center;
+    }
+    
+    .header-logo-img {
+        width: 130px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .header-nav {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .header-buttons {
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .header-buttons .btn {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        min-width: auto !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    header {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .header-logo-img {
+        width: 110px;
+    }
+    
+    header h1 {
+        font-size: 1.25rem;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    .header-logo {
+        gap: 12px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .header-buttons .btn {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 480px) {
+    .header-buttons .btn {
+        min-width: 100px;
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+    }
 }
 
 .btn {
@@ -365,7 +552,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center; /* Centralizar todos os filhos */
     overflow-x: auto;
     overflow-y: auto;
     border: 1px solid rgba(148, 163, 184, 0.08);
@@ -404,11 +591,11 @@ main {
     overflow-x: auto;
     overflow-y: visible;
     margin-bottom: var(--spacing-xl);
-    padding: var(--spacing-lg) var(--spacing-2xl);
+    padding: var(--spacing-lg) 0; /* Remove padding lateral para não afetar centralização */
     box-sizing: border-box;
     min-height: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: center !important; /* Força centralização */
     align-items: flex-start;
 }
 
@@ -2303,7 +2490,7 @@ html body .todos-view-container .google-visualization-orgchart-table td {
     /* Força o uso de flexbox em casos específicos */
     display: flex !important;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center !important; /* Força centralização */
     align-items: flex-start;
     gap: 20px;
     padding: 25px;
@@ -2311,7 +2498,9 @@ html body .todos-view-container .google-visualization-orgchart-table td {
     border-radius: 12px;
     border: 2px solid #06b6d4;
     box-shadow: 0 4px 16px rgba(6, 182, 212, 0.1);
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto; /* Centraliza o container */
+    width: 100%;
+    max-width: none; /* Remove limitação inicial */
 }
 
 /* Cards de coordenadores com largura fixa para melhor alinhamento */
@@ -2324,19 +2513,28 @@ html body .todos-view-container .google-visualization-orgchart-table td {
 
 /* Layout otimizado baseado no número de coordenadores */
 .coordenadores-section[data-count="1"] {
-    justify-content: center;
-    max-width: 400px;
-    margin: 0 auto 25px auto;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 400px !important;
+    margin: 0 auto 25px auto !important;
+    display: flex !important;
+    width: 100% !important;
+}
+
+.coordenadores-section[data-count="1"] > * {
+    margin: 0 auto !important;
 }
 
 .coordenadores-section[data-count="2"] {
-    justify-content: space-around;
+    justify-content: center;
     max-width: 800px;
     margin: 0 auto 25px auto;
+    gap: 40px;
 }
 
 .coordenadores-section[data-count="3"] {
-    justify-content: space-around;
+    justify-content: center;
     max-width: 1000px;
     margin: 0 auto 25px auto;
 }
@@ -2352,6 +2550,30 @@ html body .todos-view-container .google-visualization-orgchart-table td {
     justify-content: space-between;
     max-width: 1400px;
     margin: 0 auto 25px auto;
+}
+
+/* FORÇA CENTRALIZAÇÃO ABSOLUTA PARA CARDS DE COORDENADORES */
+.coordenador-card {
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* Centralização específica para container de cards únicos */
+.coordenadores-section:has(.coordenador-card:only-child) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* Fallback para navegadores que não suportam :has() */
+.coordenadores-section {
+    text-align: center !important;
+}
+
+.coordenadores-section .coordenador-card {
+    display: inline-block !important;
+    margin: 0 auto !important;
 }
 
 /* Responsividade aprimorada para coordenadores */
@@ -2490,15 +2712,14 @@ html body .todos-view-container .google-visualization-orgchart-table td {
     }
 }
 
-/* ================== BOTÕES DE AÇÃO NOS CARDS ================== */
+/* ================== BOTÕES DE AÇÃO NOS CARDS - APENAS EDITAR ================== */
 .card-actions {
     position: absolute;
     top: 8px;
     right: 8px;
     display: flex;
-    gap: 4px;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
     z-index: 5;
 }
 
@@ -2507,35 +2728,60 @@ html body .todos-view-container .google-visualization-orgchart-table td {
 }
 
 .action-btn {
-    width: 24px;
-    height: 24px;
-    border: none;
-    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid transparent;
+    border-radius: 8px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    transition: all 0.2s ease;
-    background: rgba(255, 255, 255, 0.9);
-    color: #374151;
-    backdrop-filter: blur(2px);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.action-btn:hover {
-    background: #fff;
-    transform: scale(1.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Botão de Editar - Estado padrão já com cor azul */
+.edit-btn {
+    background: #3b82f6;
+    color: white;
+    border-color: #2563eb;
 }
 
 .edit-btn:hover {
-    background: #3b82f6;
-    color: white;
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-.delete-btn:hover {
-    background: #ef4444;
+.edit-btn:active {
+    transform: translateY(0);
+    background: #1d4ed8;
+}
+
+/* Tooltip para melhor UX */
+.action-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.action-btn:hover::after {
+    opacity: 1;
 }
 
 /* ================== LISTA DE SUBORDINADOS NO MODAL ================== */
@@ -2583,13 +2829,31 @@ html body .todos-view-container .google-visualization-orgchart-table td {
 @media (max-width: 768px) {
     .card-actions {
         opacity: 1; /* Sempre visível em mobile */
-        top: 4px;
-        right: 4px;
+        top: 6px;
+        right: 6px;
+        gap: 4px;
     }
     
     .action-btn {
-        width: 20px;
-        height: 20px;
-        font-size: 10px;
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    /* Desabilita tooltips em mobile */
+    .action-btn::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .action-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+    
+    .card-actions {
+        gap: 3px;
     }
 }
